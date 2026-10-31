@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Product Manager | Portwise Ventures</title><meta name="description" content="Portwise Ventures: export-import, business consultation and logistics from Chattogram, Bangladesh. Bridging Markets, Empowering Trade.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body>
+<header><div class="wrap"><a class="logo" href="index.html">PORTWISE <b>VENTURES</b></a><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="markets.html">Markets</a><a href="contact.html">Contact</a></nav></div></header>
+<div class="hero sm"><div class="wrap"><h1>Product Manager</h1><p>Add or delete products and photos. Changes go live about a minute after saving.</p></div></div>
+<section><div class="wrap">
+<div class="card"><h3>1. Connect to GitHub</h3><p>Paste your fine-grained access token (Contents: read and write, this repository only). It is saved only in this browser. Use your own device and click Forget token when finished.</p>
+<div class="f"><label>Repository<input id="repo" value="portwiseventures/portwiseventures.github.io"></label><label>Access token<input id="tok" type="password" placeholder="github_pat_..." autocomplete="off"></label>
+<div><button class="btn" id="save" type="button">Save and load products</button><button class="btn o2" id="forget" type="button">Forget token</button></div></div><p id="msg"></p></div>
+<div id="app" style="display:none"><h2 style="margin-top:34px">2. Add a product</h2>
+<form class="f" id="add"><div class="r"><label>Brand<select name="brand"><option>Evara</option><option>Agrinest</option><option>Primecrest</option></select></label><label>Product name<input name="pname" required></label></div>
+<label>Details<textarea name="desc" rows="4" required></textarea></label>
+<div class="r"><label>Minimum order (optional)<input name="moq" placeholder="e.g. 5,000 pcs"></label><label>Photo (optional)<input type="file" id="img" accept="image/*"></label></div>
+<button class="btn" type="submit">Add product</button></form>
+<h2 style="margin-top:34px">3. Current products</h2><div class="grid" id="list"></div></div>
+</div></section>
+<script src="admin.js"></script>
+<footer><div class="wrap">&copy; 2026 Portwise Ventures, Chattogram, Bangladesh &middot; <a href="mailto:portwiseventures@gmail.com">portwiseventures@gmail.com</a> &middot; +880 1575 645253<br>Bridging Markets, Empowering Trade.</div></footer></body></html>
