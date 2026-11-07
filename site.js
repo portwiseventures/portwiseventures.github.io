@@ -10,20 +10,21 @@ if(s.linkedin){q('[data-set~="linkedin"]',function(e){e.href=s.linkedin});q('[da
 }).catch(function(){})})();
 
 /* Forms: tries Web3Forms (if a key is set below), then FormSubmit; if both fail, offers WhatsApp / email with the enquiry pre-written */
-(function(){var W3='7ebb2ba6-16ed-4441-805a-bba12245b02a';/* paste your free Web3Forms access key between the quotes */
+(function(){var W3='7ebb2ba6-16ed-4441-805a-bba12245b02a';/* free Web3Forms access key (public by design) */
 var F=document.querySelectorAll('form[data-formemail]');if(!F.length)return;
-function post(u,b){var ctl=window.AbortController?new AbortController():null,tm=setTimeout(function(){ctl&&ctl.abort()},8000);
-return fetch(u,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(b),signal:ctl?ctl.signal:undefined}).then(function(r){return r.json()}).then(function(j){clearTimeout(tm);if(!(j&&(j.success===true||j.success==='true')))throw 0},function(e){clearTimeout(tm);throw e})}
+function post(n,u,b,why){var ctl=window.AbortController?new AbortController():null,tm=setTimeout(function(){ctl&&ctl.abort()},8000);
+return fetch(u,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(b),signal:ctl?ctl.signal:undefined}).then(function(r){return r.json().then(function(j){return[r,j]},function(){return[r,null]})}).then(function(a){clearTimeout(tm);var r=a[0],j=a[1];if(!(j&&(j.success===true||j.success==='true'))){why.push(n+': '+(j&&j.message?j.message:'HTTP '+r.status));throw 0}},function(e){clearTimeout(tm);why.push(n+': '+((e&&e.name)||'network error'));throw 0})}
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 F.forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();
 var b=f.querySelector('button[type=submit],button:not([type])'),old=b?b.textContent:'',box=f.nextElementSibling;
 if(!box||!box.classList.contains('fbk')){box=document.createElement('div');box.className='fbk';box.setAttribute('role','status');f.parentNode.insertBefore(box,f.nextSibling)}
-var d={},lines=[];new FormData(f).forEach(function(v,k){d[k]=v;if(k.charAt(0)!=='_'&&String(v).trim())lines.push(k.replace(/_/g,' ').replace(/^./,function(c){return c.toUpperCase()})+': '+v)});
+var why=[],d={},lines=[];new FormData(f).forEach(function(v,k){d[k]=v;if(k.charAt(0)!=='_'&&String(v).trim())lines.push(k.replace(/_/g,' ').replace(/^./,function(c){return c.toUpperCase()})+': '+v)});
 var em=(f.action.split('/').pop()||'').trim(),wa=document.querySelector('a[data-set~="wa"]'),num=(wa&&(wa.href.match(/wa\.me\/(\d+)/)||[])[1])||'8801575645253',
 subj=d._subject||'Website enquiry',msg=subj+'\n\n'+lines.join('\n');
 function ok(){box.className='fbk ok';box.innerHTML='<b>Thank you.</b> We have received your request and will reply personally.';f.reset()}
-function fail(){box.className='fbk no';box.innerHTML='<b>We could not send your request automatically.</b> Your details are ready, so please send them in one tap:<br><a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+num+'?text='+encodeURIComponent(msg)+'">Send on WhatsApp</a><a class="btn o2" href="mailto:'+em+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(msg)+'">Send by email</a>'}
+function fail(){var dbg=/debug/.test(location.search)?'<br><small>Technical note: '+esc(why.join(' | '))+'</small>':'';box.className='fbk no';box.innerHTML='<b>We could not send your request automatically.</b> Your details are ready, so please send them in one tap:<br><a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+num+'?text='+encodeURIComponent(msg)+'">Send on WhatsApp</a><a class="btn o2" href="mailto:'+em+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(msg)+'">Send by email</a>'+dbg}
 if(d._honey){ok();return}
 if(b){b.disabled=true;b.textContent='Sending...'}
 var p={};for(var k in d)if(k.charAt(0)!=='_')p[k]=d[k];p.access_key=W3;p.subject=subj;p.from_name='Portwise Ventures website';
-(W3?post('https://api.web3forms.com/submit',p):Promise.reject()).catch(function(){return post('https://formsubmit.co/ajax/'+em,d)}).then(ok,fail).then(function(){if(b){b.disabled=false;b.textContent=old}});
+(W3?post('Web3Forms','https://api.web3forms.com/submit',p,why):Promise.reject()).catch(function(){return post('FormSubmit','https://formsubmit.co/ajax/'+em,d,why)}).then(ok,fail).then(function(){if(b){b.disabled=false;b.textContent=old}});
 box.scrollIntoView({block:'nearest'})})})})();
