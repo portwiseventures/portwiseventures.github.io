@@ -10,7 +10,7 @@ if(s.linkedin){q('[data-set~="linkedin"]',function(e){e.href=s.linkedin});q('[da
 }).catch(function(){})})();
 
 /* Forms: tries Web3Forms (if a key is set below), then FormSubmit; if both fail, offers WhatsApp / email with the enquiry pre-written */
-(function(){var W3='7ebb2ba6-16ed-4441-805a-bba12245b02a';/* free Web3Forms access key (public by design) */
+(function(){var W3='45eae522-92ab-4361-bf91-a9f2a093e7a3';/* free Web3Forms access key (public by design) */
 var F=document.querySelectorAll('form[data-formemail]');if(!F.length)return;
 function post(n,u,b,why){var ctl=window.AbortController?new AbortController():null,tm=setTimeout(function(){ctl&&ctl.abort()},8000);
 return fetch(u,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(b),signal:ctl?ctl.signal:undefined}).then(function(r){return r.json().then(function(j){return[r,j]},function(){return[r,null]})}).then(function(a){clearTimeout(tm);var r=a[0],j=a[1];if(!(j&&(j.success===true||j.success==='true'))){why.push(n+': '+(j&&j.message?j.message:'HTTP '+r.status));throw 0}},function(e){clearTimeout(tm);why.push(n+': '+((e&&e.name)||'network error'));throw 0})}
