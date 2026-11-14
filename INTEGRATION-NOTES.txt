@@ -1,0 +1,34 @@
+PORTWISE VENTURES — WEBSITE EXTENSION NOTES
+
+This package preserves the original website pages, images, product data, catalogues and visual stylesheet. The only site-wide visual navigation addition is a footer link to trade-tools.html. A new page, Trade Tools & Intelligence, uses the existing style.css components and palette.
+
+Working additions:
+- Indicative shipping estimate calculator (user-entered assumptions; not a freight quote).
+- Currency converter using a public exchange-rate endpoint; gracefully reports when the service is unavailable.
+- Incoterms quick-reference descriptions with ICC reference link.
+- Export document checklist with print support.
+- Product comparison populated from products.json.
+- Seasonal product list populated from AGRINEST catalogue availability data.
+- HS classification reference links.
+- Links for custom-product, sample, bulk and traceability enquiries; quote form prefill support.
+- Country-specific official trade/tariff resource links.
+- Meeting request via email (not automated calendar booking).
+- External shipment tracking directory (not live Portwise carrier tracking).
+- Basic site-content assistant (not a generative AI integration).
+- Printable buyer guide.
+- Portwise Trade Intelligence curated external resource centre.
+- LinkedIn and contact paths.
+
+Requires third-party account/API/backend configuration before activation:
+- Automated CRM lead storage and abandoned-enquiry recovery.
+- Newsletter signup automation.
+- Meeting calendar booking.
+- Live carrier tracking API.
+- Analytics and conversion tracking (approved measurement ID and consent configuration).
+- Consent-based lead capture pop-ups.
+- Automated email workflows beyond the existing FormSubmit form handling.
+- AI assistant connected to an approved knowledge base.
+- Original market reports, case studies and testimonials: publish only verified and approved material.
+- Live freight quotations: carrier/forwarder API and negotiated rate data required.
+
+The current site is static HTML/CSS/JavaScript. The existing FormSubmit forms continue to use site-config.json for the recipient email. Do not publish API secrets in client-side JavaScript; use a server-side endpoint for private credentials and stored customer data.
