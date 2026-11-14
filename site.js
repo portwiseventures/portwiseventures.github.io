@@ -1,30 +1,50 @@
-(function(){
-function clean(h){var d=new DOMParser().parseFromString(h,'text/html').body;d.querySelectorAll('*').forEach(function(n){if(!/^(B|I|STRONG|EM|BR|A|SPAN)$/.test(n.tagName)){n.replaceWith(document.createTextNode(n.textContent));return}[].slice.call(n.attributes).forEach(function(a){if(!(n.tagName=='A'&&a.name=='href'&&/^(https?:|mailto:|#|[\w.\-]+\.html)/i.test(a.value)))n.removeAttribute(a.name)})});return d.innerHTML}
-fetch('content.json?v='+Date.now()).then(function(r){return r.ok?r.json():{}}).then(function(c){
-var t=c.texts||{},s=c.settings||{},q=function(a,f){document.querySelectorAll(a).forEach(f)};
-q('[data-key]',function(e){var v=t[e.getAttribute('data-key')];if(v){if(e.hasAttribute('data-rich'))e.innerHTML=clean(v);else e.textContent=v}});
-if(s.phone)q('[data-txt~="phone"]',function(e){e.textContent=s.phone});
-if(s.whatsapp)q('[data-set~="wa"]',function(e){e.href=e.href.replace(/wa\.me\/\d+/,'wa.me/'+String(s.whatsapp).replace(/\D/g,''))});
-if(s.email){q('[data-set~="email"]',function(e){e.href='mailto:'+s.email});q('[data-txt~="email"]',function(e){e.textContent=s.email});q('form[data-formemail]',function(f){f.action='https://formsubmit.co/'+s.email})}
-if(s.linkedin){q('[data-set~="linkedin"]',function(e){e.href=s.linkedin});q('[data-txt~="linkedin"]',function(e){e.textContent=s.linkedin.replace(/^https?:\/\//,'')})}
-}).catch(function(){})})();
+/* Portwise Ventures - site.js
+   Fills in contact details everywhere and (optionally) applies text/config overrides.
+   Edit the defaults below, or add site-config.json / site-content.json next to this file. */
+(function () {
+  'use strict';
+  var C = { email: 'info@portwiseventures.com', phone: '+880 1575 645253', whatsapp: '8801575645253', formEmail: '' };
 
-/* Forms: tries Web3Forms (if a key is set below), then FormSubmit; if both fail, offers WhatsApp / email with the enquiry pre-written */
-(function(){var W3='445eae522-92ab-4361-bf91-a9f2a093e7a3';/* free Web3Forms access key (public by design) */
-var F=document.querySelectorAll('form[data-formemail]');if(!F.length)return;
-function post(n,u,b,why){var ctl=window.AbortController?new AbortController():null,tm=setTimeout(function(){ctl&&ctl.abort()},8000);
-return fetch(u,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(b),signal:ctl?ctl.signal:undefined}).then(function(r){return r.json().then(function(j){return[r,j]},function(){return[r,null]})}).then(function(a){clearTimeout(tm);var r=a[0],j=a[1];if(!(j&&(j.success===true||j.success==='true'))){why.push(n+': '+(j&&j.message?j.message:'HTTP '+r.status));throw 0}},function(e){clearTimeout(tm);why.push(n+': '+((e&&e.name)||'network error'));throw 0})}
-function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-F.forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();
-var b=f.querySelector('button[type=submit],button:not([type])'),old=b?b.textContent:'',box=f.nextElementSibling;
-if(!box||!box.classList.contains('fbk')){box=document.createElement('div');box.className='fbk';box.setAttribute('role','status');f.parentNode.insertBefore(box,f.nextSibling)}
-var why=[],d={},lines=[];new FormData(f).forEach(function(v,k){d[k]=v;if(k.charAt(0)!=='_'&&String(v).trim())lines.push(k.replace(/_/g,' ').replace(/^./,function(c){return c.toUpperCase()})+': '+v)});
-var em=(f.action.split('/').pop()||'').trim(),wa=document.querySelector('a[data-set~="wa"]'),num=(wa&&(wa.href.match(/wa\.me\/(\d+)/)||[])[1])||'8801575645253',
-subj=d._subject||'Website enquiry',msg=subj+'\n\n'+lines.join('\n');
-function ok(){box.className='fbk ok';box.innerHTML='<b>Thank you.</b> We have received your request and will reply personally.';f.reset()}
-function fail(){var dbg=/debug/.test(location.search)?'<br><small>Technical note: '+esc(why.join(' | '))+'</small>':'';box.className='fbk no';box.innerHTML='<b>We could not send your request automatically.</b> Your details are ready, so please send them in one tap:<br><a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+num+'?text='+encodeURIComponent(msg)+'">Send on WhatsApp</a><a class="btn o2" href="mailto:'+em+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(msg)+'">Send by email</a>'+dbg}
-if(d._honey){ok();return}
-if(b){b.disabled=true;b.textContent='Sending...'}
-var p={};for(var k in d)if(k.charAt(0)!=='_')p[k]=d[k];p.access_key=W3;p.subject=subj;p.from_name='Portwise Ventures website';
-(W3?post('Web3Forms','https://api.web3forms.com/submit',p,why):Promise.reject()).catch(function(){return post('FormSubmit','https://formsubmit.co/ajax/'+em,d,why)}).then(ok,fail).then(function(){if(b){b.disabled=false;b.textContent=old}});
-box.scrollIntoView({block:'nearest'})})})})();
+  function digits(s) { return String(s || '').replace(/\D/g, ''); }
+  function each(sel, fn) { var n = document.querySelectorAll(sel); for (var i = 0; i < n.length; i++) fn(n[i]); }
+
+  function applyContact() {
+    each('[data-set="email"]', function (a) { a.setAttribute('href', 'mailto:' + C.email); });
+    each('[data-txt="email"]', function (s) { s.textContent = C.email; });
+    each('[data-txt="phone"]', function (s) { s.textContent = C.phone; });
+    each('[data-set="wa"]', function (a) {
+      var h = a.getAttribute('href') || '', q = h.indexOf('?') > -1 ? h.slice(h.indexOf('?')) : '';
+      a.setAttribute('href', 'https://wa.me/' + digits(C.whatsapp) + q);
+    });
+    if (C.formEmail) {
+      each('form[data-formemail]', function (f) { f.setAttribute('action', 'https://formsubmit.co/' + C.formEmail); });
+    }
+  }
+
+  function applyContent(map) {
+    each('[data-key]', function (el) {
+      var k = el.getAttribute('data-key');
+      if (Object.prototype.hasOwnProperty.call(map, k) && typeof map[k] === 'string') {
+        if (el.getAttribute('data-rich') === '1') el.innerHTML = map[k]; else el.textContent = map[k];
+      }
+    });
+  }
+
+  function load(url) {
+    return fetch(url, { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+  }
+
+  applyContact();
+  if (window.fetch) {
+    load('site-config.json').then(function (cfg) {
+      if (cfg) {
+        if (cfg.email) C.email = cfg.email;
+        if (cfg.phone) C.phone = cfg.phone;
+        if (cfg.whatsapp) C.whatsapp = cfg.whatsapp;
+        if (cfg.formEmail) C.formEmail = cfg.formEmail;
+        applyContact();
+      }
+    });
+    load('site-content.json').then(function (map) { if (map && typeof map === 'object') applyContent(map); });
+  }
+})();
