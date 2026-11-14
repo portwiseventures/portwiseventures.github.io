@@ -39,3 +39,8 @@ img.bn{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 2px 
 .bc{position:relative;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(20,45,76,.1);text-align:left}.bc img{display:block;width:100%;height:auto}.bb{padding:14px 18px 20px}.bb h3{margin:4px 0 6px}.bb h3 a{text-decoration:none;color:var(--navy)}.bb h3 a::after{content:"";position:absolute;inset:0}.bb p{font-size:14px}.gm{display:block;width:100%;height:auto;border-radius:12px}
 @media(max-width:820px){.mg{grid-template-columns:1fr}.fc{border:0;padding:0}.top .m{display:none}header.nb .wrap{flex-wrap:wrap;gap:8px}.nb nav{order:3;flex-basis:100%}.hero::after{background:rgba(11,35,69,.72)}}
 @media(max-width:600px){nav a{margin:0 12px 0 0}header .wrap{gap:8px}}
+
+/* Additive styles for Trade Tools page; existing site design is retained. */
+.tool-note{font-size:13px;color:#5B6B7D}.checklist{display:grid;gap:7px;margin:8px 0 14px}.checklist label{display:flex;align-items:center;gap:8px;font-size:14px}.checklist input{width:auto}.country-links{display:flex;flex-wrap:wrap;gap:8px 14px}.country-links a{font-weight:600}
+#compareResult table{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}#compareResult td{padding:7px;border-bottom:1px solid #d9e0e8;vertical-align:top}#compareResult td:first-child{font-weight:700;color:var(--navy)}
+@media print{header,.top,footer,.wa,.hero,.band,button{display:none!important}body{background:#fff}section{padding:10px 0}.card{box-shadow:none;break-inside:avoid}}

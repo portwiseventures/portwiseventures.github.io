@@ -34,7 +34,32 @@
     return fetch(url, { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
   }
 
+
+  // Prefill the existing quote form when a visitor arrives from a trade tool.
+  function prefillQuote() {
+    var form = document.querySelector('form[data-formemail]');
+    if (!form) return;
+    var q = new URLSearchParams(window.location.search);
+    var brand = q.get('brand'), product = q.get('product'), type = q.get('type'), samples = q.get('samples');
+    var msg = form.querySelector('[name="details"]');
+    var brandField = form.querySelector('[name="brand"]');
+    var sampleField = form.querySelector('[name="samples"]');
+    if (brand && brandField) {
+      var opts = Array.prototype.slice.call(brandField.options);
+      var match = opts.find(function(o){return o.text.toLowerCase().indexOf(brand.toLowerCase())>-1;});
+      if (match) brandField.value = match.value;
+    }
+    if (product && form.querySelector('[name="product"]')) form.querySelector('[name="product"]').value = product;
+    if (samples === 'yes' && sampleField) sampleField.value = 'Yes';
+    if (msg && (type || q.get('interest'))) {
+      var prefix = type === 'custom' ? 'Custom product request. ' : type === 'bulk' ? 'Bulk order enquiry. ' : '';
+      prefix += q.get('interest') ? 'Enquiry type: ' + q.get('interest') + '. ' : '';
+      msg.value = prefix + msg.value;
+    }
+  }
+
   applyContact();
+  prefillQuote();
   if (window.fetch) {
     load('site-config.json').then(function (cfg) {
       if (cfg) {
