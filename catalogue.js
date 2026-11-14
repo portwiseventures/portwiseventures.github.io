@@ -21,11 +21,11 @@
     items.forEach(function (p) {
       if (brand && brand !== 'All' && p.brand !== brand) return;
       var c = el('div', 'card ' + (colors[String(p.brand || '').toLowerCase()] || ''));
-      if (p.image) { var im = el('img'); im.src = p.image; im.alt = p.name || ''; im.style.cssText = 'width:100%;border-radius:8px;margin-bottom:10px'; c.appendChild(im); }
+      var pimg = p.image || (p.images && p.images[0]); if (pimg) { var im = el('img'); im.src = pimg; im.alt = p.name || ''; im.style.cssText = 'width:100%;border-radius:8px;margin-bottom:10px'; c.appendChild(im); }
       c.appendChild(el('h3', '', p.name || ''));
       if (p.brand || p.category) c.appendChild(el('p', '', [p.brand, p.category].filter(Boolean).join(' · ')));
       if (p.description) c.appendChild(el('p', '', p.description));
-      var a = el('a', 'btn', 'Request a quote'); a.href = 'quote.html'; c.appendChild(a);
+      var a = el('a', 'btn', 'View details'); a.href = p.id ? 'product.html?p=' + encodeURIComponent(p.id) : 'quote.html'; c.appendChild(a);
       list.appendChild(c); shown++;
     });
     if (empty) empty.style.display = shown ? 'none' : '';

@@ -1,1 +1,1945 @@
-[]
+[
+ {
+  "id": "agrinest-cauliflower",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Cauliflower",
+  "category": "Cabbage & Brassicas",
+  "description": "Cauliflower from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Brassica oleracea var. botrytis"
+   ],
+   [
+    "Size",
+    "1.2–2 kg"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Rangpur, Jashore, Meherpur"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-cauliflower.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-cabbage",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Cabbage",
+  "category": "Cabbage & Brassicas",
+  "description": "Cabbage from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Brassica oleracea var. capitata"
+   ],
+   [
+    "Size",
+    "1–2.5 kg"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Rangpur, Jashore, Meherpur"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-cabbage.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-red-cabbage",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Red Cabbage",
+  "category": "Cabbage & Brassicas",
+  "description": "Red Cabbage from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Brassica oleracea var. capitata f. rubra"
+   ],
+   [
+    "Size",
+    "0.7–1.5 kg"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Satkhira, Munshiganj, Chuadanga"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-red-cabbage.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-broccoli",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Broccoli",
+  "category": "Cabbage & Brassicas",
+  "description": "Broccoli from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Brassica oleracea var. italica"
+   ],
+   [
+    "Size",
+    "0.3–0.7 kg"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Jashore, Tangail, Rajshahi"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-broccoli.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-kohlrabi-white-green",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Kohlrabi (White/Green)",
+  "category": "Cabbage & Brassicas",
+  "description": "Kohlrabi (White/Green) from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Brassica oleracea var. gongylodes"
+   ],
+   [
+    "Size",
+    "250–500 g"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Jashore, Rangpur, Pabna"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-kohlrabi-white-green.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-kohlrabi-purple",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Kohlrabi (Purple)",
+  "category": "Cabbage & Brassicas",
+  "description": "Kohlrabi (Purple) from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Brassica oleracea var. gongylodes"
+   ],
+   [
+    "Size",
+    "250–500 g"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Jashore, Rangpur, Rajshahi"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-kohlrabi-purple.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-bok-choy",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Bok Choy",
+  "category": "Cabbage & Brassicas",
+  "description": "Bok Choy from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Brassica rapa subsp. chinensis"
+   ],
+   [
+    "Size",
+    "50–150 g"
+   ],
+   [
+    "Growing regions",
+    "Gazipur, Savar, Jashore, Bogura"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-bok-choy.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-hyacinth-bean",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Hyacinth Bean",
+  "category": "Beans, Peas & Corn",
+  "description": "Hyacinth Bean from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Lablab purpureus"
+   ],
+   [
+    "Size",
+    "10–25 g"
+   ],
+   [
+    "Growing regions",
+    "Chattogram, Cumilla, Jashore, Narsingdi"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-hyacinth-bean.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-butter-bean",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Butter Bean",
+  "category": "Beans, Peas & Corn",
+  "description": "Butter Bean from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Phaseolus lunatus"
+   ],
+   [
+    "Size",
+    "3–5 in long"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Chattogram, Cumilla, Khulna"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-butter-bean.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-green-peas",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Green Peas",
+  "category": "Beans, Peas & Corn",
+  "description": "Green Peas from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Pisum sativum"
+   ],
+   [
+    "Size",
+    "2–4 in long"
+   ],
+   [
+    "Growing regions",
+    "Jashore, Pabna, Rajshahi, Bogura"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-green-peas.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-long-bean",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Long Bean",
+  "category": "Beans, Peas & Corn",
+  "description": "Long Bean from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Vigna unguiculata subsp. sesquipedalis"
+   ],
+   [
+    "Size",
+    "12–30 in long"
+   ],
+   [
+    "Growing regions",
+    "Jashore, Narsingdi, Cumilla, Bogura"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-long-bean.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-french-bean",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "French Bean",
+  "category": "Beans, Peas & Corn",
+  "description": "French Bean from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Phaseolus vulgaris"
+   ],
+   [
+    "Size",
+    "4–6 in long"
+   ],
+   [
+    "Growing regions",
+    "Jashore, Bogura, Tangail, Rangpur"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-french-bean.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-sweet-corn",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Sweet Corn",
+  "category": "Beans, Peas & Corn",
+  "description": "Sweet Corn from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Zea mays var. saccharata"
+   ],
+   [
+    "Size",
+    "250–400 g"
+   ],
+   [
+    "Growing regions",
+    "Chuadanga, Dinajpur, Bogura, Lalmonirhat"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-sweet-corn.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-potato",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Potato",
+  "category": "Roots & Alliums",
+  "description": "Potato from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Solanum tuberosum"
+   ],
+   [
+    "Size",
+    "10–50 g"
+   ],
+   [
+    "Growing regions",
+    "Munshiganj, Bogura, Rangpur, Dinajpur"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-potato.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-spring-onion",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Spring Onion",
+  "category": "Roots & Alliums",
+  "description": "Spring Onion from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Allium fistulosum"
+   ],
+   [
+    "Size",
+    "12–20 in"
+   ],
+   [
+    "Growing regions",
+    "Pabna, Faridpur, Rajshahi, Bogura"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-spring-onion.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-leek",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Leek",
+  "category": "Roots & Alliums",
+  "description": "Leek from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Allium ampeloprasum var. porrum"
+   ],
+   [
+    "Size",
+    "12–24 in, dia. 1–2 in"
+   ],
+   [
+    "Growing regions",
+    "Pabna, Faridpur, Rajshahi, Bogura"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-leek.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-garlic-new-crop",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Garlic (New Crop)",
+  "category": "Roots & Alliums",
+  "description": "Garlic (New Crop) from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Allium sativum"
+   ],
+   [
+    "Size",
+    "20–50 g"
+   ],
+   [
+    "Growing regions",
+    "Natore, Pabna, Rajshahi, Dinajpur"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-garlic-new-crop.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-garlic-greens",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Garlic Greens",
+  "category": "Roots & Alliums",
+  "description": "Garlic Greens from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Allium sativum"
+   ],
+   [
+    "Size",
+    "25–40 cm"
+   ],
+   [
+    "Growing regions",
+    "Pabna, Natore, Rajshahi, Dinajpur"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-garlic-greens.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-ginger",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Ginger",
+  "category": "Roots & Alliums",
+  "description": "Ginger from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Zingiber officinale"
+   ],
+   [
+    "Size",
+    "100–350 g"
+   ],
+   [
+    "Growing regions",
+    "Tangail, Rangamati, Khagrachhari, Bandarban"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-ginger.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-white-radish",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "White Radish",
+  "category": "Roots & Alliums",
+  "description": "White Radish from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Raphanus sativus var. longipinnatus"
+   ],
+   [
+    "Size",
+    "250–600 g"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Jashore, Jamalpur, Rajshahi"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-white-radish.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-red-radish",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Red Radish",
+  "category": "Roots & Alliums",
+  "description": "Red Radish from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Raphanus sativus"
+   ],
+   [
+    "Size",
+    "25–50 g"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Jashore, Narsingdi, Cumilla"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-red-radish.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-carrot",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Carrot",
+  "category": "Roots & Alliums",
+  "description": "Carrot from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Daucus carota subsp. sativus"
+   ],
+   [
+    "Size",
+    "100–250 g"
+   ],
+   [
+    "Growing regions",
+    "Manikganj, Bogura, Jashore, Pabna"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-carrot.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-beetroot",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Beetroot",
+  "category": "Roots & Alliums",
+  "description": "Beetroot from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Beta vulgaris subsp. vulgaris"
+   ],
+   [
+    "Size",
+    "100–250 g"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Jashore, Rajshahi, Manikganj"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-beetroot.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-bottle-gourd-long",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Bottle Gourd (Long)",
+  "category": "Gourds & Pumpkins",
+  "description": "Bottle Gourd (Long) from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Lagenaria siceraria"
+   ],
+   [
+    "Size",
+    "700–1500 g"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Jashore, Jamalpur, Narsingdi"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-bottle-gourd-long.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-bottle-gourd-round",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Bottle Gourd (Round)",
+  "category": "Gourds & Pumpkins",
+  "description": "Bottle Gourd (Round) from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Lagenaria siceraria"
+   ],
+   [
+    "Size",
+    "700–1500 g"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Jashore, Jamalpur, Narsingdi"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-bottle-gourd-round.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-sweet-pumpkin-baby",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Sweet Pumpkin (Baby)",
+  "category": "Gourds & Pumpkins",
+  "description": "Sweet Pumpkin (Baby) from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Cucurbita moschata"
+   ],
+   [
+    "Size",
+    "1.5–4.5 kg"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Jashore, Jamalpur, Gaibandha"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-sweet-pumpkin-baby.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-sweet-pumpkin-adult",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Sweet Pumpkin (Adult)",
+  "category": "Gourds & Pumpkins",
+  "description": "Sweet Pumpkin (Adult) from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Cucurbita moschata"
+   ],
+   [
+    "Size",
+    "1.5–4.5 kg"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Jashore, Jamalpur, Gaibandha"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-sweet-pumpkin-adult.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-giant-pumpkin",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Giant Pumpkin",
+  "category": "Gourds & Pumpkins",
+  "description": "Giant Pumpkin from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Cucurbita moschata"
+   ],
+   [
+    "Size",
+    "10–180 kg"
+   ],
+   [
+    "Growing regions",
+    "Southern Char areas, Haor regions, Northern Char lands, Arial Beel"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-giant-pumpkin.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-ash-gourd",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Ash Gourd",
+  "category": "Gourds & Pumpkins",
+  "description": "Ash Gourd from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Benincasa hispida"
+   ],
+   [
+    "Size",
+    "1.0–2.5 kg"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Jashore, Cumilla, Narsingdi"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-ash-gourd.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-squash-green",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Squash (Green)",
+  "category": "Fruiting Vegetables",
+  "description": "Squash (Green) from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Cucurbita pepo"
+   ],
+   [
+    "Size",
+    "200–450 g"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Jashore, Manikganj, Rajshahi"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-squash-green.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-tomato",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Tomato",
+  "category": "Fruiting Vegetables",
+  "description": "Tomato from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Solanum lycopersicum"
+   ],
+   [
+    "Size",
+    "70–150 g"
+   ],
+   [
+    "Growing regions",
+    "Rajshahi, Jashore, Dinajpur, Bogura"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-tomato.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-cherry-tomato",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Cherry Tomato",
+  "category": "Fruiting Vegetables",
+  "description": "Cherry Tomato from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Solanum lycopersicum var. cerasiforme"
+   ],
+   [
+    "Size",
+    "10–25 g"
+   ],
+   [
+    "Growing regions",
+    "Rajshahi, Bogura, Jashore, Manikganj"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-cherry-tomato.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-brinjal-eggplant-green",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Brinjal / Eggplant (Green)",
+  "category": "Fruiting Vegetables",
+  "description": "Brinjal / Eggplant (Green) from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Solanum melongena"
+   ],
+   [
+    "Size",
+    "200–500 g"
+   ],
+   [
+    "Growing regions",
+    "Narsingdi, Pabna, Jashore, Bogura"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-brinjal-eggplant-green.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-brinjal-eggplant-purple-oval",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Brinjal / Eggplant (Purple, Oval)",
+  "category": "Fruiting Vegetables",
+  "description": "Brinjal / Eggplant (Purple, Oval) from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Solanum melongena"
+   ],
+   [
+    "Size",
+    "200–500 g"
+   ],
+   [
+    "Growing regions",
+    "Narsingdi, Pabna, Jashore, Bogura"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-brinjal-eggplant-purple-oval.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-brinjal-eggplant-purple-long",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Brinjal / Eggplant (Purple, Long)",
+  "category": "Fruiting Vegetables",
+  "description": "Brinjal / Eggplant (Purple, Long) from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Solanum melongena"
+   ],
+   [
+    "Size",
+    "200–500 g"
+   ],
+   [
+    "Growing regions",
+    "Narsingdi, Pabna, Jashore, Bogura"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-brinjal-eggplant-purple-long.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-capsicum",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Capsicum",
+  "category": "Fruiting Vegetables",
+  "description": "Capsicum from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Capsicum annuum"
+   ],
+   [
+    "Size",
+    "100–350 g"
+   ],
+   [
+    "Growing regions",
+    "Dhaka, Gazipur, Mymensingh"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-capsicum.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-green-chilli",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Green Chilli",
+  "category": "Fruiting Vegetables",
+  "description": "Green Chilli from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Capsicum annuum"
+   ],
+   [
+    "Size",
+    "4–10 g"
+   ],
+   [
+    "Growing regions",
+    "Bogura, Manikganj, Jashore, Jamalpur"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-green-chilli.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-bitter-gourd-large",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Bitter Gourd (Large)",
+  "category": "Gourds & Pumpkins",
+  "description": "Bitter Gourd (Large) from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Momordica charantia"
+   ],
+   [
+    "Size",
+    "100–250 g"
+   ],
+   [
+    "Growing regions",
+    "Jashore, Narsingdi, Bogura, Cumilla, Manikganj"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-bitter-gourd-large.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-bitter-gourd-small",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Bitter Gourd (Small)",
+  "category": "Gourds & Pumpkins",
+  "description": "Bitter Gourd (Small) from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Momordica charantia"
+   ],
+   [
+    "Size",
+    "20–50 g"
+   ],
+   [
+    "Growing regions",
+    "Jashore, Narsingdi, Bogura, Cumilla, Manikganj"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-bitter-gourd-small.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-cucumber",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Cucumber",
+  "category": "Fruiting Vegetables",
+  "description": "Cucumber from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Cucumis sativus"
+   ],
+   [
+    "Size",
+    "150–300 g"
+   ],
+   [
+    "Growing regions",
+    "Joypurhat, Jashore, Bogura, Mymensingh"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-cucumber.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-cucumber-long-khira",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Cucumber (Long / Khira)",
+  "category": "Fruiting Vegetables",
+  "description": "Cucumber (Long / Khira) from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Cucumis sativus"
+   ],
+   [
+    "Size",
+    "200–400 g"
+   ],
+   [
+    "Growing regions",
+    "Naogaon, Narail, Jashore, Bogura"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-cucumber-long-khira.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-sponge-gourd",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Sponge Gourd",
+  "category": "Gourds & Pumpkins",
+  "description": "Sponge Gourd from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Luffa aegyptiaca"
+   ],
+   [
+    "Size",
+    "100–250 g"
+   ],
+   [
+    "Growing regions",
+    "Jashore, Narsingdi, Bogura, Cumilla"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-sponge-gourd.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-snake-gourd",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Snake Gourd",
+  "category": "Gourds & Pumpkins",
+  "description": "Snake Gourd from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Trichosanthes cucumerina"
+   ],
+   [
+    "Size",
+    "200–450 g"
+   ],
+   [
+    "Growing regions",
+    "Jashore, Narsingdi, Bogura, Cumilla"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-snake-gourd.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-ridge-gourd",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Ridge Gourd",
+  "category": "Gourds & Pumpkins",
+  "description": "Ridge Gourd from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Luffa acutangula"
+   ],
+   [
+    "Size",
+    "150–300 g"
+   ],
+   [
+    "Growing regions",
+    "Jashore, Narsingdi, Bogura, Cumilla"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-ridge-gourd.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-green-papaya",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Green Papaya",
+  "category": "Fruiting Vegetables",
+  "description": "Green Papaya from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Carica papaya"
+   ],
+   [
+    "Size",
+    "500–1500 g"
+   ],
+   [
+    "Growing regions",
+    "Rajshahi, Kushtia, Jashore, Pabna"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-green-papaya.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "agrinest-sweet-potato",
+  "sku": "",
+  "brand": "AGRINEST",
+  "name": "Sweet Potato",
+  "category": "Roots & Alliums",
+  "description": "Sweet Potato from Bangladesh, sourced for export. Winter 2026–27 season.",
+  "specs": [
+   [
+    "Botanical name",
+    "Ipomoea batatas"
+   ],
+   [
+    "Size",
+    "100–250 g"
+   ],
+   [
+    "Growing regions",
+    "Jamalpur, Sherpur, Kurigram, Manikganj"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "In season: winter 2026–27",
+  "export": "Export from Bangladesh. Sizes and availability vary by season.",
+  "images": [
+   "p-agrinest-sweet-potato.jpg"
+  ],
+  "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+ },
+ {
+  "id": "evara-hessian-hobo-shoulder-bag",
+  "sku": "EV-JL-01",
+  "brand": "EVARA",
+  "name": "Hessian Hobo Shoulder Bag",
+  "category": "Jute & Leather Bags",
+  "description": "Soft natural jute with a tan leather strap and silver clip hardware.",
+  "specs": [
+   [
+    "Item code",
+    "EV-JL-01"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-hessian-hobo-shoulder-bag.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ },
+ {
+  "id": "evara-hessian-pocket-tote",
+  "sku": "EV-JL-02",
+  "brand": "EVARA",
+  "name": "Hessian Pocket Tote",
+  "category": "Jute & Leather Bags",
+  "description": "Roomy jute shoulder tote with front pocket, snap button and leather strap.",
+  "specs": [
+   [
+    "Item code",
+    "EV-JL-02"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-hessian-pocket-tote.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ },
+ {
+  "id": "evara-crochet-jute-tote",
+  "sku": "EV-JL-03",
+  "brand": "EVARA",
+  "name": "Crochet Jute Tote",
+  "category": "Jute & Leather Bags",
+  "description": "Hand-crocheted jute with leather handles and a tassel with wooden bead.",
+  "specs": [
+   [
+    "Item code",
+    "EV-JL-03"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-crochet-jute-tote.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ },
+ {
+  "id": "evara-crochet-jute-shopper",
+  "sku": "EV-JL-04",
+  "brand": "EVARA",
+  "name": "Crochet Jute Shopper",
+  "category": "Jute & Leather Bags",
+  "description": "Textured crochet jute with long leather handles and an Evara tag.",
+  "specs": [
+   [
+    "Item code",
+    "EV-JL-04"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-crochet-jute-shopper.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ },
+ {
+  "id": "evara-classic-jute-tote-set",
+  "sku": "EV-TG-01",
+  "brand": "EVARA",
+  "name": "Classic Jute Tote Set",
+  "category": "Totes & Gift Bags",
+  "description": "Structured jute totes in three sizes with rolled handles and a branded hang tag.",
+  "specs": [
+   [
+    "Item code",
+    "EV-TG-01"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "Three sizes",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-classic-jute-tote-set.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ },
+ {
+  "id": "evara-mini-bow-tote",
+  "sku": "EV-TG-02",
+  "brand": "EVARA",
+  "name": "Mini Bow Tote",
+  "category": "Totes & Gift Bags",
+  "description": "Small jute tote finished with a satin bow, made for gifting and special occasions.",
+  "specs": [
+   [
+    "Item code",
+    "EV-TG-02"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-mini-bow-tote.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ },
+ {
+  "id": "evara-crochet-bucket-bag",
+  "sku": "EV-TG-03",
+  "brand": "EVARA",
+  "name": "Crochet Bucket Bag",
+  "category": "Totes & Gift Bags",
+  "description": "Jute bucket bag with soft lining, braided handles and a wooden-bead tassel.",
+  "specs": [
+   [
+    "Item code",
+    "EV-TG-03"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-crochet-bucket-bag.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ },
+ {
+  "id": "evara-window-bottle-bag",
+  "sku": "EV-BB-01",
+  "brand": "EVARA",
+  "name": "Window Bottle Bag",
+  "category": "Bottle Bags",
+  "description": "Single-bottle jute carrier with a clear window and soft cotton handles.",
+  "specs": [
+   [
+    "Item code",
+    "EV-BB-01"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-window-bottle-bag.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ },
+ {
+  "id": "evara-bottle-bag-collection",
+  "sku": "EV-BB-02",
+  "brand": "EVARA",
+  "name": "Bottle Bag Collection",
+  "category": "Bottle Bags",
+  "description": "Handled and drawstring jute bottle bags with rattan, cotton and rope handles.",
+  "specs": [
+   [
+    "Item code",
+    "EV-BB-02"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "Handled and drawstring styles; rattan, cotton and rope handles",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-bottle-bag-collection.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ },
+ {
+  "id": "evara-drawstring-bottle-bag",
+  "sku": "EV-BB-03",
+  "brand": "EVARA",
+  "name": "Drawstring Bottle Bag",
+  "category": "Bottle Bags",
+  "description": "Gathered jute sleeve with ribbon tie and a chalk-style label.",
+  "specs": [
+   [
+    "Item code",
+    "EV-BB-03"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-drawstring-bottle-bag.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ },
+ {
+  "id": "evara-tassel-rope-basket",
+  "sku": "EV-BK-01",
+  "brand": "EVARA",
+  "name": "Tassel Rope Basket",
+  "category": "Baskets & Planters",
+  "description": "Coiled jute rope basket with cream cotton tassels. Perfect as a planter.",
+  "specs": [
+   [
+    "Item code",
+    "EV-BK-01"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-tassel-rope-basket.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ },
+ {
+  "id": "evara-jute-cotton-rope-basket",
+  "sku": "EV-BK-02",
+  "brand": "EVARA",
+  "name": "Jute & Cotton Rope Basket",
+  "category": "Baskets & Planters",
+  "description": "Two-tone basket with a braided jute band and cream cotton rope top.",
+  "specs": [
+   [
+    "Item code",
+    "EV-BK-02"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-jute-cotton-rope-basket.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ },
+ {
+  "id": "evara-handled-storage-baskets",
+  "sku": "EV-BK-03",
+  "brand": "EVARA",
+  "name": "Handled Storage Baskets",
+  "category": "Baskets & Planters",
+  "description": "Large rope baskets with wrapped handles and tassel accents.",
+  "specs": [
+   [
+    "Item code",
+    "EV-BK-03"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-handled-storage-baskets.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ },
+ {
+  "id": "evara-basket-collection",
+  "sku": "EV-BK-04",
+  "brand": "EVARA",
+  "name": "Basket Collection",
+  "category": "Baskets & Planters",
+  "description": "Woven and rope baskets with handles, pom-pom accents and planter sizes.",
+  "specs": [
+   [
+    "Item code",
+    "EV-BK-04"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "Basket and planter sizes",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-basket-collection.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ },
+ {
+  "id": "evara-handcrafted-gift-set",
+  "sku": "EV-GP-01",
+  "brand": "EVARA",
+  "name": "Handcrafted Gift Set",
+  "category": "Gift Sets & Packaging",
+  "description": "Jute book cover, jar wrap, zip pouch and bottle bag with polka-dot bow trim.",
+  "specs": [
+   [
+    "Item code",
+    "EV-GP-01"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "Set of jute book cover, jar wrap, zip pouch and bottle bag",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-handcrafted-gift-set.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ },
+ {
+  "id": "evara-window-drawstring-pouches",
+  "sku": "EV-GP-02",
+  "brand": "EVARA",
+  "name": "Window Drawstring Pouches",
+  "category": "Gift Sets & Packaging",
+  "description": "Natural drawstring pouches in three sizes with a clear display window.",
+  "specs": [
+   [
+    "Item code",
+    "EV-GP-02"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "Three sizes",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-window-drawstring-pouches.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ },
+ {
+  "id": "evara-rope-trinket-boxes",
+  "sku": "EV-GP-03",
+  "brand": "EVARA",
+  "name": "Rope Trinket Boxes",
+  "category": "Gift Sets & Packaging",
+  "description": "Coiled jute rope lidded boxes and tray for decor, storage and gifting.",
+  "specs": [
+   [
+    "Item code",
+    "EV-GP-03"
+   ]
+  ],
+  "origin": "Bangladesh",
+  "packaging": "Confirmed in your quotation",
+  "variants": "Lidded boxes and tray",
+  "moq": "Confirmed in your quotation",
+  "availability": "Available on request",
+  "export": "Export from Bangladesh. Custom design, branding and private label available on request.",
+  "images": [
+   "p-evara-rope-trinket-boxes.jpg"
+  ],
+  "catalogue": "Evara-Product-Catalogue.pdf",
+  "catalogue_label": "Evara Product Catalogue"
+ }
+]
