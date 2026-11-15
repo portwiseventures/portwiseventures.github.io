@@ -44,3 +44,10 @@ img.bn{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 2px 
 .tool-note{font-size:13px;color:#5B6B7D}.checklist{display:grid;gap:7px;margin:8px 0 14px}.checklist label{display:flex;align-items:center;gap:8px;font-size:14px}.checklist input{width:auto}.country-links{display:flex;flex-wrap:wrap;gap:8px 14px}.country-links a{font-weight:600}
 #compareResult table{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}#compareResult td{padding:7px;border-bottom:1px solid #d9e0e8;vertical-align:top}#compareResult td:first-child{font-weight:700;color:var(--navy)}
 @media print{header,.top,footer,.wa,.hero,.band,button{display:none!important}body{background:#fff}section{padding:10px 0}.card{box-shadow:none;break-inside:avoid}}
+
+/* Mobile menu: show every menu item (no sideways scrolling) */
+@media(max-width:760px){
+  header.nb{position:static}
+  header .wrap nav{flex-wrap:wrap;overflow:visible;white-space:normal;gap:2px 16px;flex-basis:100%;order:3;padding-top:6px}
+  header .wrap nav a{font-size:13.5px;padding:5px 0}
+}
