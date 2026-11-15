@@ -1,0 +1,11 @@
+ANALYTICS SETUP (consent-aware)
+
+Nothing is tracked today. To switch analytics on, edit site-config.json:
+
+  Google Analytics 4 (shows a consent banner; loads only after "Accept"):
+    "analytics": { "provider": "ga4", "id": "G-XXXXXXXXXX" }
+
+  Plausible (cookieless, no banner needed):
+    "analytics": { "provider": "plausible", "id": "portwiseventures.com" }
+
+You need your own account and ID. A "Cookie settings" link then appears in the footer so visitors can change their choice.

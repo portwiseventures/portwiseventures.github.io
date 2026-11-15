@@ -1,0 +1,71 @@
+[
+ {
+  "id": "evara-catalogue",
+  "title": "EVARA Product Catalogue",
+  "category": "Catalogues",
+  "brand": "EVARA",
+  "format": "PDF",
+  "file": "Evara-Product-Catalogue.pdf",
+  "description": "Jute products from Bangladesh: bags, baskets, bottle bags, gift sets and packaging.",
+  "status": "available",
+  "size": "6.4 MB"
+ },
+ {
+  "id": "agrinest-catalogue",
+  "title": "AGRINEST Product Catalogue 2026–27",
+  "category": "Catalogues",
+  "brand": "AGRINEST",
+  "format": "PDF",
+  "file": "Agrinest-Product-Catalogue-2026-27.pdf",
+  "description": "46 winter fresh vegetables and fruits with sizes and growing regions.",
+  "meta": "2026–27 season",
+  "status": "available",
+  "size": "3.2 MB"
+ },
+ {
+  "id": "buyer-guide",
+  "title": "Buyer Guide",
+  "category": "Buyer guides",
+  "brand": "Portwise Ventures",
+  "format": "Printable page",
+  "link": "knowledge.html#buyer-guide",
+  "description": "A printable planning checklist for your export enquiry.",
+  "status": "available"
+ },
+ {
+  "id": "primecrest-catalogue",
+  "title": "PRIME CREST Product Catalogue",
+  "category": "Catalogues",
+  "brand": "PRIME CREST",
+  "format": "PDF",
+  "description": "Fish, meat and seafood. Not yet available.",
+  "status": "soon"
+ },
+ {
+  "id": "logicwise-profile",
+  "title": "LOGICWISE Company Profile",
+  "category": "Company profiles",
+  "brand": "LOGICWISE",
+  "format": "PDF",
+  "description": "Digital products and solutions. Not yet available.",
+  "status": "soon"
+ },
+ {
+  "id": "portwise-profile",
+  "title": "Portwise Ventures Company Profile",
+  "category": "Company profiles",
+  "brand": "Portwise Ventures",
+  "format": "PDF",
+  "description": "Not yet available.",
+  "status": "soon"
+ },
+ {
+  "id": "market-reports",
+  "title": "Market Reports",
+  "category": "Reports",
+  "brand": "Portwise Ventures",
+  "format": "PDF",
+  "description": "Original trade and market reports will be published here once verified research is available.",
+  "status": "soon"
+ }
+]
