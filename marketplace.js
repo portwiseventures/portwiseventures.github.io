@@ -72,6 +72,7 @@
   function init() {
     var u = new URLSearchParams(location.search), b = (u.get('brand') || '').toUpperCase().replace('-', ' ');
     if (BRANDS.indexOf(b) > -1) S.brand = b;
+    if (u.get('cat')) S.cat = u.get('cat');
     if (u.get('q')) { S.q = u.get('q'); $('q').value = S.q; }
     $('q').oninput = function () { S.q = this.value.trim(); S.shown = 24; render(); };
     $('fcat').onchange = function () { S.cat = this.value; S.shown = 24; render(); };

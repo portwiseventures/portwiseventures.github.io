@@ -1,0 +1,17 @@
+/* Hub pages: shared styles */
+.subnav{background:#fff;border-bottom:1px solid #dde3ea}.subnav .wrap{display:flex;gap:8px;overflow-x:auto;white-space:nowrap;padding:12px 20px}
+.subnav a{border:2px solid var(--navy);color:var(--navy);border-radius:20px;padding:6px 14px;font-weight:700;font-size:.9rem;text-decoration:none}.subnav a:hover{background:var(--navy);color:#fff}
+section[id]{scroll-margin-top:96px}.lead{max-width:760px;margin:0 auto 22px;text-align:center}
+.faqs details{background:#fff;border:1px solid #dde3ea;border-radius:10px;padding:14px 16px;margin:0 0 10px}.faqs summary{cursor:pointer;font-weight:700;color:var(--navy)}.faqs details p{margin:10px 0 0}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.pc{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(20,45,76,.1);display:flex;flex-direction:column}
+.pi{display:block;aspect-ratio:4/3;background:#eef2f6;overflow:hidden}.pi img{width:100%;height:100%;object-fit:cover;display:block}
+.pb{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}.pb h3{margin:0;font-size:1.05rem}.pb h3 a{color:var(--navy);text-decoration:none}
+.bt{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:#6b7b8c;font-weight:700}.sm{margin:0;color:#4d5b69;font-size:.92rem}
+.pr{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:8px}.btn2{border:2px solid var(--navy);color:var(--navy);border-radius:8px;padding:8px 12px;font-weight:700;text-decoration:none;font-size:.9rem}
+.note{background:#eef2f7;border-left:4px solid var(--gold);padding:14px 16px;border-radius:8px;margin:14px 0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tabs button{border:2px solid var(--navy);background:#fff;color:var(--navy);border-radius:20px;padding:6px 14px;font:inherit;font-weight:600;cursor:pointer}.tabs button.on{background:var(--navy);color:#fff}
+.nl .card{margin-bottom:14px}.nl time{display:block;color:#6b7b8c;font-size:.85rem;margin-bottom:4px}
+table.cmp{width:100%;border-collapse:collapse;margin-top:14px;background:#fff}.cmp th,.cmp td{border:1px solid #dde3ea;padding:9px 10px;text-align:left;vertical-align:top;font-size:.93rem}.cmp th{background:#eef2f7;width:28%}
+.cmpbox{overflow-x:auto}
+.chips2{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}.chips2 button{border:1px solid #c9d2dc;background:#fff;border-radius:16px;padding:5px 12px;font:inherit;cursor:pointer;color:var(--navy)}.chips2 button:hover{border-color:var(--navy)}

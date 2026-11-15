@@ -30,7 +30,8 @@
    "p-agrinest-cauliflower.jpg"
   ],
   "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
-  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+  "catalogue_label": "Agrinest Product Catalogue 2026–27",
+  "featured": true
  },
  {
   "id": "agrinest-cabbage",
@@ -426,7 +427,8 @@
    "p-agrinest-sweet-corn.jpg"
   ],
   "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
-  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+  "catalogue_label": "Agrinest Product Catalogue 2026–27",
+  "featured": true
  },
  {
   "id": "agrinest-potato",
@@ -723,7 +725,8 @@
    "p-agrinest-carrot.jpg"
   ],
   "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
-  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+  "catalogue_label": "Agrinest Product Catalogue 2026–27",
+  "featured": true
  },
  {
   "id": "agrinest-beetroot",
@@ -1020,7 +1023,8 @@
    "p-agrinest-tomato.jpg"
   ],
   "catalogue": "Agrinest-Product-Catalogue-2026-27.pdf",
-  "catalogue_label": "Agrinest Product Catalogue 2026–27"
+  "catalogue_label": "Agrinest Product Catalogue 2026–27",
+  "featured": true
  },
  {
   "id": "agrinest-cherry-tomato",
@@ -1590,7 +1594,8 @@
    "p-evara-crochet-jute-tote.jpg"
   ],
   "catalogue": "Evara-Product-Catalogue.pdf",
-  "catalogue_label": "Evara Product Catalogue"
+  "catalogue_label": "Evara Product Catalogue",
+  "featured": true
  },
  {
   "id": "evara-crochet-jute-shopper",
@@ -1640,7 +1645,8 @@
    "p-evara-classic-jute-tote-set.jpg"
   ],
   "catalogue": "Evara-Product-Catalogue.pdf",
-  "catalogue_label": "Evara Product Catalogue"
+  "catalogue_label": "Evara Product Catalogue",
+  "featured": true
  },
  {
   "id": "evara-mini-bow-tote",
@@ -1715,7 +1721,8 @@
    "p-evara-window-bottle-bag.jpg"
   ],
   "catalogue": "Evara-Product-Catalogue.pdf",
-  "catalogue_label": "Evara Product Catalogue"
+  "catalogue_label": "Evara Product Catalogue",
+  "featured": true
  },
  {
   "id": "evara-bottle-bag-collection",
@@ -1790,7 +1797,8 @@
    "p-evara-tassel-rope-basket.jpg"
   ],
   "catalogue": "Evara-Product-Catalogue.pdf",
-  "catalogue_label": "Evara Product Catalogue"
+  "catalogue_label": "Evara Product Catalogue",
+  "featured": true
  },
  {
   "id": "evara-jute-cotton-rope-basket",

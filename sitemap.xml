@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://portwiseventures.com/</loc></url>
+<url><loc>https://portwiseventures.com/why-portwise.html</loc></url>
 <url><loc>https://portwiseventures.com/about.html</loc></url>
-<url><loc>https://portwiseventures.com/products.html</loc></url>
 <url><loc>https://portwiseventures.com/marketplace.html</loc></url>
-<url><loc>https://portwiseventures.com/services.html</loc></url>
-<url><loc>https://portwiseventures.com/sourcing.html</loc></url>
-<url><loc>https://portwiseventures.com/catalogue.html</loc></url>
-<url><loc>https://portwiseventures.com/markets.html</loc></url>
-<url><loc>https://portwiseventures.com/order.html</loc></url>
-<url><loc>https://portwiseventures.com/contact.html</loc></url>
-<url><loc>https://portwiseventures.com/quote.html</loc></url>
+<url><loc>https://portwiseventures.com/products.html</loc></url>
 <url><loc>https://portwiseventures.com/evara.html</loc></url>
 <url><loc>https://portwiseventures.com/agrinest.html</loc></url>
 <url><loc>https://portwiseventures.com/primecrest.html</loc></url>
 <url><loc>https://portwiseventures.com/logicwise.html</loc></url>
+<url><loc>https://portwiseventures.com/sourcing.html</loc></url>
+<url><loc>https://portwiseventures.com/services.html</loc></url>
+<url><loc>https://portwiseventures.com/order.html</loc></url>
+<url><loc>https://portwiseventures.com/markets.html</loc></url>
+<url><loc>https://portwiseventures.com/trade-tools.html</loc></url>
+<url><loc>https://portwiseventures.com/knowledge.html</loc></url>
 <url><loc>https://portwiseventures.com/downloads.html</loc></url>
+<url><loc>https://portwiseventures.com/newsroom.html</loc></url>
+<url><loc>https://portwiseventures.com/opportunities.html</loc></url>
+<url><loc>https://portwiseventures.com/business-desk.html</loc></url>
 <url><loc>https://portwiseventures.com/faq.html</loc></url>
+<url><loc>https://portwiseventures.com/contact.html</loc></url>
+<url><loc>https://portwiseventures.com/quote.html</loc></url>
+<url><loc>https://portwiseventures.com/catalogue.html</loc></url>
 <url><loc>https://portwiseventures.com/terms.html</loc></url>
 <url><loc>https://portwiseventures.com/privacy.html</loc></url>
 <url><loc>https://portwiseventures.com/product.html?p=agrinest-cauliflower</loc></url>
@@ -82,4 +88,4 @@
 <url><loc>https://portwiseventures.com/product.html?p=evara-handcrafted-gift-set</loc></url>
 <url><loc>https://portwiseventures.com/product.html?p=evara-window-drawstring-pouches</loc></url>
 <url><loc>https://portwiseventures.com/product.html?p=evara-rope-trinket-boxes</loc></url>
-<url><loc>https://portwiseventures.com/trade-tools.html</loc></url></urlset>
+</urlset>

@@ -51,3 +51,36 @@ img.bn{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 2px 
   header .wrap nav{flex-wrap:wrap;overflow:visible;white-space:normal;gap:2px 16px;flex-basis:100%;order:3;padding-top:6px}
   header .wrap nav a{font-size:13.5px;padding:5px 0}
 }
+
+/* ===== Dropdown navigation (desktop) and menu button (mobile) ===== */
+header .wrap nav{overflow:visible;white-space:normal;display:block;flex:1}
+nav ul.mm{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px 6px;align-items:center;justify-content:center}
+nav ul.mm>li{position:relative;display:flex;align-items:center}
+nav ul.mm>li>a{color:var(--navy);font-size:13.5px;font-weight:700;padding:10px 8px;border-bottom:2px solid transparent;margin:0;text-decoration:none}
+nav ul.mm>li>a:hover,nav ul.mm>li>a.on{border-color:var(--gold);color:var(--navy)}
+nav .car{background:none;border:0;color:var(--navy);cursor:pointer;padding:6px 4px;font-size:11px;line-height:1}
+nav ul.sub{display:none;position:absolute;top:100%;left:0;min-width:250px;background:#fff;border:1px solid #dde3ea;border-radius:10px;box-shadow:0 14px 34px rgba(20,45,76,.18);padding:8px;list-style:none;margin:0;z-index:30}
+nav ul.sub a{display:block;color:var(--navy);padding:9px 12px;border-radius:6px;font-size:13.5px;font-weight:600;text-decoration:none;margin:0;border:0}
+nav ul.sub a:hover,nav ul.sub a[aria-current]{background:#eef2f7}
+nav li.dd:focus-within>ul.sub,nav li.dd.open>ul.sub{display:block}
+@media(hover:hover) and (min-width:901px){nav li.dd:hover>ul.sub{display:block}}
+nav ul.mm>li.dd:nth-last-child(-n+3)>ul.sub{left:auto;right:0}
+nav ul.mm>li.mq{display:none}
+.navtoggle{display:none;background:var(--navy);color:#fff;border:0;border-radius:8px;padding:10px 16px;font:700 14px Montserrat,Arial,sans-serif;cursor:pointer}
+@media(max-width:900px){
+  header.nb{position:static}
+  header .wrap{flex-wrap:wrap;gap:8px}
+  .navtoggle{display:inline-flex;gap:8px;align-items:center;margin-left:auto}
+  header .wrap>.btn.sm{display:none}
+  header .wrap nav{display:none;flex-basis:100%;order:5}
+  header .wrap nav.open{display:block}
+  nav ul.mm{flex-direction:column;align-items:stretch;gap:0;justify-content:flex-start;border-top:1px solid #dde3ea}
+  nav ul.mm>li{flex-wrap:wrap;border-bottom:1px solid #eef2f7;justify-content:space-between}
+  nav ul.mm>li>a{flex:1;padding:13px 4px;border:0;font-size:15px}
+  nav .car{padding:12px 14px;font-size:14px}
+  nav ul.sub{position:static;display:none;box-shadow:none;border:0;border-radius:0;width:100%;padding:0 0 8px 12px;background:#f7f9fb}
+  nav li.dd:focus-within>ul.sub{display:none}
+  nav li.dd.open>ul.sub{display:block}
+  nav ul.mm>li.mq{display:flex;border:0;padding:12px 0 6px}
+  nav li.mq a{background:var(--gold);color:var(--navy);padding:12px 18px;border-radius:8px;font-weight:700;text-align:center;flex:1;text-decoration:none}
+}
