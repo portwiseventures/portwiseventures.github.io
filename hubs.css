@@ -40,3 +40,11 @@ table.cmp{width:100%;border-collapse:collapse;margin-top:14px;background:#fff}.c
 .mk{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #dde3ea;border-radius:18px;padding:5px 12px;font-size:.88rem;font-weight:600;color:var(--navy)}
 .mk b,.cc{display:inline-block;background:var(--navy);color:#fff;border-radius:6px;padding:1px 6px;font-size:.72rem;letter-spacing:.06em}
 .cc{margin-right:6px;vertical-align:middle}
+
+/* Forms: steps, progress, checkboxes */
+.prog{display:flex;gap:6px;list-style:none;margin:0 0 18px;padding:0;flex-wrap:wrap}.prog li{flex:1;min-width:70px;text-align:center;font-size:.78rem;font-weight:700;padding:6px 4px;border-bottom:4px solid #dde3ea;color:#6b7b8c}.prog li.on{border-color:var(--gold);color:var(--navy)}.prog li.done{border-color:var(--navy);color:var(--navy)}
+fieldset.step,fieldset.qf{border:0;padding:0;margin:0 0 10px}fieldset.qf{border:1px solid #dde3ea;border-radius:10px;padding:12px 14px;margin:12px 0}fieldset.step legend,fieldset.qf legend{font-weight:700;color:var(--navy);padding:0 4px}
+fieldset.step[hidden]{display:none}.sr{position:absolute;left:-9999px}
+label.ck{display:flex;align-items:flex-start;gap:8px;font-weight:600;margin:8px 0}label.ck input{width:auto;margin-top:4px}
+label.opt{display:flex;gap:10px;align-items:center;background:#fff;border:2px solid #dde3ea;border-radius:10px;padding:12px 14px;margin:8px 0;cursor:pointer;font-weight:600;color:var(--navy)}label.opt:has(input:checked){border-color:var(--gold);background:#fffaf0}label.opt input{width:auto}
+.slbtn[aria-pressed="true"]{background:var(--navy);color:#fff}

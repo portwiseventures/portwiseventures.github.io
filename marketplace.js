@@ -55,6 +55,9 @@
     var r = el('div', 'pr');
     var d = el('a', 'btn2', 'View details'); d.href = a.href; r.appendChild(d);
     var q = el('a', 'btn', 'Request quotation'); q.href = a.href + '#rfq'; r.appendChild(q);
+    var sb = el('button', 'btn2 slbtn', ''); sb.type = 'button';
+    function paintSb() { var h = window.PW && PW.sl && PW.sl.has(p.id); sb.textContent = h ? '\u2605 Shortlisted' : '\u2606 Shortlist'; sb.setAttribute('aria-pressed', h ? 'true' : 'false'); }
+    sb.onclick = function () { if (window.PW && PW.sl) { PW.sl.toggle(p.id); paintSb(); } }; paintSb(); r.appendChild(sb);
     b.appendChild(r); c.appendChild(b); return c;
   }
   function render() {

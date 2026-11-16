@@ -23,6 +23,15 @@
     if (p.variants) rows.push(['Available variants', p.variants]);
     rows.push(['Packaging', p.packaging], ['Minimum order quantity', p.moq], ['Availability', p.availability], ['Export', p.export]);
     var tb = $('spec'); rows.forEach(function (r) { var tr = el('tr'); tr.appendChild(el('th', '', r[0])); tr.appendChild(el('td', '', r[1])); tb.appendChild(tr); });
+        var tools = $('ptools');
+    if (tools) {
+      var sb = el('button', 'btn2 slbtn', ''); sb.type = 'button';
+      var paintSb = function () { var h = window.PW && PW.sl && PW.sl.has(p.id); sb.textContent = h ? '\u2605 In your shortlist (remove)' : '\u2606 Add to shortlist'; sb.setAttribute('aria-pressed', h ? 'true' : 'false'); };
+      sb.onclick = function () { if (window.PW && PW.sl) { PW.sl.toggle(p.id); paintSb(); } }; paintSb(); tools.appendChild(sb);
+      var pdf = el('button', 'btn2', 'Download specification sheet (PDF)'); pdf.type = 'button';
+      pdf.onclick = function () { pdf.disabled = true; var t = pdf.textContent; pdf.textContent = 'Preparing PDF...'; PW.spec.download([p]).then(function () { pdf.textContent = t; pdf.disabled = false; }).catch(function () { pdf.textContent = t; pdf.disabled = false; alert('The PDF could not be created. Please try again or contact us for the specification sheet.'); }); };
+      tools.appendChild(pdf);
+    }
     if (p.catalogue) { var d = $('dlcat'); d.href = p.catalogue; d.textContent = 'Download ' + p.catalogue_label + ' (PDF)'; d.style.display = ''; }
     // RFQ
     $('f_product').value = p.name + ' (' + p.brand + (p.sku ? ', ' + p.sku : '') + ')';
