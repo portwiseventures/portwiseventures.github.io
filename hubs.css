@@ -48,3 +48,13 @@ fieldset.step[hidden]{display:none}.sr{position:absolute;left:-9999px}
 label.ck{display:flex;align-items:flex-start;gap:8px;font-weight:600;margin:8px 0}label.ck input{width:auto;margin-top:4px}
 label.opt{display:flex;gap:10px;align-items:center;background:#fff;border:2px solid #dde3ea;border-radius:10px;padding:12px 14px;margin:8px 0;cursor:pointer;font-weight:600;color:var(--navy)}label.opt:has(input:checked){border-color:var(--gold);background:#fffaf0}label.opt input{width:auto}
 .slbtn[aria-pressed="true"]{background:var(--navy);color:#fff}
+
+/* Timelines and role chips */
+.tl{list-style:none;margin:20px 0 0;padding:0}.tl li{position:relative;padding:0 0 16px 58px}
+.tl li::before{content:attr(data-n);position:absolute;left:0;top:2px;width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;border:2px solid var(--gold)}
+.tl li::after{content:"";position:absolute;left:19px;top:46px;bottom:-2px;width:2px;background:#d3dbe4}.tl li:last-child::after{display:none}
+.tl details{background:#fff;border:1px solid #dde3ea;border-radius:12px;padding:12px 16px}.tl summary{cursor:pointer;font-weight:700;color:var(--navy);font-size:1.02rem}
+.tlb{margin-top:10px}.tlb p{margin:8px 0}
+.whos{display:flex;flex-wrap:wrap;gap:6px}.who{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.04em;border-radius:12px;padding:3px 10px;color:#fff;margin:0 4px 4px 0}
+.who.b{background:#b07a12}.who.p{background:#142D4C}.who.s{background:#385170}.who.e{background:#7a3d8c}
+ul.ben{margin:8px 0 10px;padding-left:20px}ul.ben li{margin:4px 0}

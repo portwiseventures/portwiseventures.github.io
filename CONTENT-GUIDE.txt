@@ -1,0 +1,10 @@
+HOW TO UPDATE CONTENT (no coding needed beyond editing these files)
+
+products.json      Products. Add an entry and a photo (p-<id>.jpg) and it appears in the marketplace, shortlist and spec sheets.
+publications.json  Resource library on the Corporate Publications page.
+news.json          Newsroom items.
+reports.json       Market reports on the Trade Intelligence page.
+capabilities.json  Factory capability profiles. Only entries with "verified": true are shown.
+site-config.json   Contact details, form recipient and analytics settings.
+
+Only add information that has been verified.
