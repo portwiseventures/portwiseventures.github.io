@@ -34,3 +34,9 @@ table.cmp{width:100%;border-collapse:collapse;margin-top:14px;background:#fff}.c
 .cookiebar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;background:#142D4C;color:#fff;border-radius:12px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.35);max-width:720px;margin:0 auto;font-size:.92rem}
 .cookiebar a{color:#E0B25B}.cookiebar .cb{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}.cookiebar button{border:0;border-radius:8px;padding:9px 16px;font:700 .9rem Arial,sans-serif;cursor:pointer}
 .cookiebar .ok{background:#E0B25B;color:#142D4C}.cookiebar .no{background:transparent;color:#fff;border:1px solid #fff}
+
+/* Target market pills */
+.mks{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 12px}
+.mk{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #dde3ea;border-radius:18px;padding:5px 12px;font-size:.88rem;font-weight:600;color:var(--navy)}
+.mk b,.cc{display:inline-block;background:var(--navy);color:#fff;border-radius:6px;padding:1px 6px;font-size:.72rem;letter-spacing:.06em}
+.cc{margin-right:6px;vertical-align:middle}
