@@ -5,6 +5,8 @@ publications.json  Resource library on the Corporate Publications page.
 news.json          Newsroom items.
 reports.json       Market reports on the Trade Intelligence page.
 capabilities.json  Factory capability profiles. Only entries with "verified": true are shown.
+availability.json   Agrinest availability updates (date + text).
+logicwise.json     LOGICWISE services and verified case studies (services appear in the portfolio and comparison).
 site-config.json   Contact details, form recipient and analytics settings.
 
 Only add information that has been verified.
