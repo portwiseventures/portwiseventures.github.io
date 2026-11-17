@@ -56,8 +56,10 @@
   "category": "Company profiles",
   "brand": "Portwise Ventures",
   "format": "PDF",
-  "description": "Not yet available.",
-  "status": "soon"
+  "description": "Company introduction, mission and vision, ecosystem, four brands, services, target markets and contact details.",
+  "status": "available",
+  "file": "Portwise-Ventures-Company-Profile.pdf",
+  "size": "0.5 MB"
  },
  {
   "id": "market-reports",
