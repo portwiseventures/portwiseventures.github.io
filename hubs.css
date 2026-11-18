@@ -66,3 +66,22 @@ ul.ben{margin:8px 0 10px;padding-left:20px}ul.ben li{margin:4px 0}
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;width:100%}.gi{display:block;text-decoration:none;color:var(--navy);background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(20,45,76,.1)}.gi img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}.gi span{display:block;padding:10px 12px;font-size:.85rem;line-height:1.4}
 .tbc{font-style:italic;color:#6b7b8c}.avl{display:grid;gap:12px;max-width:760px;margin:0 auto 10px}
 .fs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+
+/* Trade map */
+.mapwrap{display:grid;grid-template-columns:minmax(0,2fr) minmax(260px,1fr);gap:20px;align-items:start}
+@media(max-width:860px){.mapwrap{grid-template-columns:1fr}}
+.mapbox{position:relative;background:#F5F7FA;border:1px solid #dde3ea;border-radius:14px;overflow:hidden}
+#wmap{width:100%;height:auto;display:block;touch-action:manipulation}
+#wmap .sph{fill:#eaf0f6;stroke:#c9d4e0}
+#wmap .c{stroke:#fff;stroke-width:.5;transition:fill .2s}
+#wmap .c-other{fill:#d9e0e8}#wmap .c-source{fill:#142D4C;cursor:pointer}#wmap .c-planned{fill:#E0B25B;cursor:pointer}#wmap .c-target{fill:#5B7FA6;cursor:pointer}
+#wmap .c-source:hover,#wmap .c-planned:hover,#wmap .c-target:hover{opacity:.82}
+#wmap .c.sel{stroke:#E0B25B;stroke-width:1.6;fill:#0d1f36}#wmap .c-planned.sel{fill:#b98a25;stroke:#142D4C}
+#wmap .c:focus{outline:none;stroke:#E0B25B;stroke-width:1.8}
+.mapctl{position:absolute;right:10px;top:10px;display:flex;flex-direction:column;gap:6px}
+.mapctl button{width:36px;height:36px;border:1px solid #c9d2dc;border-radius:8px;background:#fff;color:#142D4C;font:700 18px Arial,sans-serif;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.mapinfo{background:#fff;border:1px solid #dde3ea;border-radius:14px;padding:18px;box-shadow:0 2px 10px rgba(20,45,76,.08)}
+.maplegend{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;margin-top:14px;font-size:.88rem;color:#4d5b69}
+.sw{display:inline-block;width:14px;height:14px;border-radius:3px;margin-right:6px;vertical-align:-2px}
+.sw.c-source{background:#142D4C}.sw.c-planned{background:#E0B25B}.sw.c-target{background:#5B7FA6}.sw.c-other{background:#d9e0e8}
+@media(prefers-reduced-motion:reduce){#wmap .c{transition:none}}

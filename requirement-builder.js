@@ -35,6 +35,7 @@
   var u = new URLSearchParams(location.search), pre = [];
   var br = (u.get('brand') || '').toUpperCase().replace('-', ' '); if (br) [].slice.call($('rbBrand').options).forEach(function (o) { if (o.text.toUpperCase().indexOf(br) === 0) { o.selected = true; } });
   if (u.get('product')) $('rbProduct').value = u.get('product');
+  if (u.get('destination')) { var dc = f.querySelector('[name=destination_country]'); if (dc) dc.value = u.get('destination'); }
   if (u.get('topic') === 'packaging') { [].slice.call(f.querySelectorAll('input[name=custom]')).forEach(function (c) { if (/Private|branding|labelling|dimensions/.test(c.value)) c.checked = true; }); pre.push('We have ticked the customisation options for a custom packaging enquiry. Please adjust them.'); }
   if (u.get('from') === 'shortlist' && window.PW) fetch('products.json').then(function (r) { return r.json(); }).then(function (all) { var l = PW.sl.get().map(function (id) { return all.filter(function (p) { return p.id === id; })[0]; }).filter(Boolean); if (l.length) { $('rbProduct').value = l.map(function (p) { return p.name + ' (' + p.brand + ')'; }).join('; '); } });
   if (pre.length) { var n = $('rbPre'); n.style.display = ''; n.textContent = pre.join(' '); }

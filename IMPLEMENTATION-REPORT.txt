@@ -1,0 +1,30 @@
+PORTWISE VENTURES: WEBSITE EXPANSION, IMPLEMENTATION REPORT
+
+IMPLEMENTED AND TESTED IN A BROWSER (no script errors)
+Phase 1: Product shortlist (no account, kept in the visitor's browser for 7 days), multi-product enquiry, product comparison, specification sheet PDF (per product and multi-product), Buyer Requirement Builder (6 steps, review, email/WhatsApp fallback), Packaging & Private Label page, Buyer Matchmaker.
+Phase 2: Our Sourcing Process, Supplier Qualification Framework, Quality Control Process, Sample Evaluation Guide with PDF checklist, Responsible Sourcing Standards, Factory Capability Profiles (empty framework).
+Phase 3: Brand pages upgraded for EVARA, AGRINEST, PRIME CREST and LOGICWISE.
+Phase 4: Partner With Us, Opportunity Board, Trade Fair Calendar (structure), Corporate Presentation (PDF profile), Email Signature Generator, Press & Media Kit, Referral Programme.
+Phase 5: Global Trade Map, Export Readiness Checker with PDF checklist.
+Not built, by instruction: AI Buyer Assistant.
+
+REQUIRES AN EXTERNAL SERVICE
+- All forms send through FormSubmit to info@portwiseventures.com. The first submission triggers an activation email that must be clicked once.
+- No database: enquiries arrive by email only. A service such as Supabase would be needed to store them.
+- Analytics are off until an ID is added to site-config.json (see ANALYTICS-SETUP.txt).
+- Newsletter, currency prices and a contact map need accounts or verified data.
+
+REQUIRES VERIFIED COMPANY INFORMATION
+- PRIME CREST product specifications, LOGICWISE services and case studies.
+- Factory capability profiles (capabilities.json), opportunities (opportunities.json), trade fairs (trade-fairs.json), market reports (reports.json), newsroom items (news.json).
+- Material, dimension, packaging and MOQ details for EVARA; storage and grading details for AGRINEST.
+
+KNOWN LIMITATIONS
+- Product pages are built by script (product.html?p=ID). Search engines see them less easily than separate pages.
+- Currency converter needs an internet connection to a public rate feed.
+- The shortlist is stored per browser and is not shared between devices.
+- India is described as planned sourcing from January 2027.
+- Terms and Privacy pages should be reviewed by a lawyer.
+
+DEPLOYMENT
+Upload the files to the repository root (GitHub Pages), in batches of fewer than 100 files. Keep jspdf.umd.min.js beside the pages. Content is edited in the JSON files listed in CONTENT-GUIDE.txt.
