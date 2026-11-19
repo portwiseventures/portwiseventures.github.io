@@ -1,0 +1,123 @@
+[
+ {
+  "id": "uk-dcts",
+  "name": "UK Developing Countries Trading Scheme (DCTS)",
+  "type": "Unilateral preference scheme",
+  "parties": [
+   "United Kingdom",
+   "Bangladesh",
+   "India"
+  ],
+  "status": "In force",
+  "statusNote": "In force since 19 June 2023. Rules-of-origin changes took effect on 1 January 2026.",
+  "summary": "A UK scheme that cuts tariffs for eligible developing countries. Bangladesh is listed in the Comprehensive Preferences tier. India is among the countries covered by the scheme's rules-of-origin cumulation groups.",
+  "sectors": "Range of goods. Rates are product-specific.",
+  "rules": "Rules of origin apply. Goods must meet the scheme's origin rules and be processed for export to the UK in an eligible country.",
+  "links": [
+   [
+    "Preference tiers (GOV.UK)",
+    "https://www.gov.uk/guidance/preference-tiers-under-the-developing-countries-trading-scheme"
+   ],
+   [
+    "Understanding rules of origin (GOV.UK)",
+    "https://gov.uk/guidance/understanding-rules-of-origin-under-the-developing-countries-trading-scheme"
+   ],
+   [
+    "Rules of origin changes now in effect (GOV.UK)",
+    "https://www.gov.uk/government/publications/rules-of-origin-changes-under-the-developing-countries-trading-scheme-are-now-in-effect"
+   ]
+  ],
+  "verified": "2026-11-19"
+ },
+ {
+  "id": "eu-gsp-eba",
+  "name": "EU Generalised Scheme of Preferences, including Everything But Arms (EBA)",
+  "type": "Unilateral preference scheme",
+  "parties": [
+   "European Union",
+   "Bangladesh"
+  ],
+  "status": "In force; new regulation applies from 1 January 2027",
+  "statusNote": "The EU's new GSP Regulation was signed on 18 June 2026 and applies from 1 January 2027. EBA gives least developed countries duty-free, quota-free access for all products except arms and ammunition.",
+  "summary": "Bangladesh currently benefits from EBA as a least developed country. Its graduation from the LDC category was scheduled for 24 November 2026 but has been reported as extended by the UN General Assembly to 24 November 2029. Check the European Commission for the transition arrangements that apply.",
+  "sectors": "All products except arms and ammunition (under EBA).",
+  "rules": "EU rules of origin apply, with product-specific rules. Check Access2Markets for your product.",
+  "links": [
+   [
+    "EU GSP overview (European Commission)",
+    "https://policy.trade.ec.europa.eu/development-and-sustainability/generalised-scheme-preferences_en"
+   ],
+   [
+    "Questions and answers on the new GSP (European Commission)",
+    "https://policy.trade.ec.europa.eu/development-and-sustainability/generalised-scheme-preferences/questions-answers-new-eu-generalised-scheme-preferences_en"
+   ],
+   [
+    "Access2Markets",
+    "https://trade.ec.europa.eu/access-to-markets/"
+   ]
+  ],
+  "verified": "2026-11-19"
+ },
+ {
+  "id": "india-uk-ceta",
+  "name": "India-UK Comprehensive Economic and Trade Agreement (CETA)",
+  "type": "Bilateral trade agreement",
+  "parties": [
+   "India",
+   "United Kingdom"
+  ],
+  "status": "In force",
+  "statusNote": "Signed on 24 July 2025 and in force since 15 July 2026.",
+  "summary": "Reduces UK tariffs on Indian goods and covers services and other areas. Preferential treatment depends on the product meeting the agreement's rules of origin and following its administrative requirements.",
+  "sectors": "Goods and services. Check the tariff schedule for your product.",
+  "rules": "Rules of origin apply and must be met to claim preferences.",
+  "links": [
+   [
+    "Ministry of Commerce and Industry, India: entry into force announcement",
+    "https://www.commerce.gov.in/files/d-m-y/1.pdf"
+   ]
+  ],
+  "verified": "2026-11-19"
+ },
+ {
+  "id": "eu-india-fta",
+  "name": "EU-India Free Trade Agreement",
+  "type": "Bilateral trade agreement",
+  "parties": [
+   "European Union",
+   "India"
+  ],
+  "status": "Negotiations concluded; not in force",
+  "statusNote": "Negotiations were concluded in January 2026. In September 2026 the European Commission proposed that the Council authorise signature. The agreement needs Council approval, the European Parliament's consent and ratification by India before it can enter into force.",
+  "summary": "A proposed agreement that is not yet in force. It does not affect duties today.",
+  "sectors": "Goods, services and investment. See the Commission's summary.",
+  "rules": "Rules of origin were agreed but only apply once the agreement is in force.",
+  "links": [
+   [
+    "EU-India trade agreement (European Commission)",
+    "https://commission.europa.eu/topics/trade/eu-india-trade-agreement_en"
+   ]
+  ],
+  "verified": "2026-11-19"
+ },
+ {
+  "id": "wto-rta",
+  "name": "WTO Regional Trade Agreements database",
+  "type": "Reference database",
+  "parties": [
+   "All WTO members"
+  ],
+  "status": "Reference",
+  "statusNote": "An official database of notified regional trade agreements.",
+  "summary": "Use it to look up agreements that involve a country you are interested in.",
+  "sectors": "Not applicable.",
+  "rules": "Not applicable.",
+  "links": [
+   [
+    "WTO RTA database",
+    "https://rtais.wto.org/"
+   ]
+  ],
+  "verified": ""
+ }
+]
