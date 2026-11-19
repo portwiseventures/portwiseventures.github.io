@@ -28,3 +28,7 @@ KNOWN LIMITATIONS
 
 DEPLOYMENT
 Upload the files to the repository root (GitHub Pages), in batches of fewer than 100 files. Keep jspdf.umd.min.js beside the pages. Content is edited in the JSON files listed in CONTENT-GUIDE.txt.
+
+ADVANCED EXPANSION, PHASE 1 (practical trade tools)
+Built and tested: Landed Cost Calculator (user-entered duty and tax rates, PDF, reset, quotation link), Container Loading Planner (typical 20 ft, 40 ft, 40 ft high cube or user-entered container, units, visualisation, PDF, print), Time Zone Meeting Planner (Dhaka availability Sunday to Thursday 10:00-18:00, daylight saving handled by the browser, sends a request only), RFQ Template Library (10 templates, branded PDF and editable Word).
+Container dimensions are typical values and must be confirmed with a carrier. Live currency rates need an internet connection. Not yet built from the advanced prompt: commodity monitor, statistics explorer, import requirements, trade agreements, materials library and comparison, configurator, multi-language, business directory, smart routing, product interest analytics.

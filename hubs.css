@@ -85,3 +85,5 @@ ul.ben{margin:8px 0 10px;padding-left:20px}ul.ben li{margin:4px 0}
 .sw{display:inline-block;width:14px;height:14px;border-radius:3px;margin-right:6px;vertical-align:-2px}
 .sw.c-source{background:#142D4C}.sw.c-planned{background:#E0B25B}.sw.c-target{background:#5B7FA6}.sw.c-other{background:#d9e0e8}
 @media(prefers-reduced-motion:reduce){#wmap .c{transition:none}}
+
+@media print{header,footer,.top,.subnav,.slpill,.navtoggle,.band,.pr,.mapctl,#cpForm,.hero,#whatsapp,.wa,.cookiebar{display:none!important}.mapwrap{display:block!important}body{background:#fff}}
