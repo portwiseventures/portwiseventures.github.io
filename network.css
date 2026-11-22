@@ -1,0 +1,22 @@
+/* Business Network forms: extends style.css (uses its colour variables). */
+.crumbs{font-size:.85rem;margin:0 0 14px;color:var(--port)}.crumbs a{color:var(--port)}.crumbs span{margin:0 6px}
+.nf{max-width:820px;margin:0 auto;gap:18px}
+.nf fieldset{border:1px solid #dde3ea;border-radius:12px;background:#fff;padding:18px 18px 8px;margin:0;display:grid;gap:14px;min-width:0}
+.nf legend{font-family:Montserrat,Arial,sans-serif;font-weight:700;color:var(--navy);padding:0 8px;font-size:1.02rem}
+.nf small.h{font-weight:400;color:var(--port);font-size:.82rem}
+.nf small.err{color:#b3261e;font-weight:600;font-size:.82rem;min-height:0}
+.nf .bad{border-color:#b3261e!important}
+.nf .chk{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px}
+.nf .chk label,.nf label.ck{display:flex;gap:8px;align-items:flex-start;font-weight:400;font-size:.95rem}
+.nf .chk input,.nf label.ck input{margin-top:3px;flex:none;width:18px;height:18px}
+.nf .fl{display:grid;gap:6px}.nf .fl ul{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:.88rem}
+.nf .fl li{display:flex;justify-content:space-between;gap:10px;background:var(--soft);border-radius:6px;padding:6px 10px;word-break:break-all}
+.nf .fl li.x{color:#b3261e}.nf .hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+.nf .alert{display:none;background:#fdecea;border-left:4px solid #b3261e;border-radius:8px;padding:12px 14px;color:#5a1510}
+.nf .alert.on{display:block}
+.nf button[disabled]{opacity:.6;cursor:wait}
+.nf .prog{height:6px;background:#e4e9ef;border-radius:4px;overflow:hidden;display:none}.nf .prog.on{display:block}.nf .prog i{display:block;height:100%;width:0;background:var(--gold);transition:width .2s}
+.done{max-width:640px;margin:0 auto;background:#fff;border-radius:14px;padding:28px 22px;text-align:center;box-shadow:0 2px 14px rgba(20,45,76,.12)}
+.done .ref{font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:1.5rem;color:var(--navy);background:var(--soft);border-radius:8px;padding:10px 14px;display:inline-block;margin:10px 0;word-break:break-all}
+.done .warn{background:#fff6e0;border-left:4px solid var(--gold);text-align:left;border-radius:8px;padding:12px 14px;margin:14px 0}
+@media (max-width:520px){.nf fieldset{padding:14px 12px 6px}.nf .r{grid-template-columns:1fr}}

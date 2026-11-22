@@ -18,7 +18,7 @@
   }
   addLinks('knowledge.html', [['materials.html', 'Sustainable Materials Library'], ['material-comparison.html', 'Material Comparison Lab']]);
   addLinks('marketplace.html', [['configurator.html', 'Custom Product Configurator']]);
-  addLinks('business-desk.html', [['business-network.html', 'Business Network'], ['business-enquiry.html', 'Business Enquiry Centre']]);
+  addLinks('business-desk.html', [['business-enquiry.html', 'Business Enquiry Centre']]);
   var cars = nav.querySelectorAll('.car');
   for (var i = 0; i < cars.length; i++) cars[i].addEventListener('click', function (e) {
     e.preventDefault(); var li = this.parentNode, open = !li.classList.contains('open'); closeAll(li);

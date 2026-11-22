@@ -1,0 +1,22 @@
+BUSINESS NETWORK ADDITION — what changed (Phase 2 front end)
+
+NEW FILES
+ buyer-registration.html, supplier-registration.html, request-a-product.html,
+ submit-a-product.html, supplier-response.html (reached from an opportunity with ?opp=OPP-2026-000001;
+ not in the menu, noindex)
+ network.css (form styles), network-forms.js (form engine), pw-config.js (PUBLIC config only)
+
+CHANGED FILES
+ 58 existing pages: a "Business Network" dropdown was added to the main menu. Nothing removed.
+ nav.js: removed a duplicate "Business Network" label from the Business menu (page still reachable
+ from the new dropdown). sitemap.xml: 4 pages added.
+
+KEYS IN pw-config.js ARE PUBLIC BY DESIGN: Supabase project URL and Turnstile SITE key only.
+Never add a service_role key, secret key or Resend key to any file in this repository.
+
+FORMS TALK TO: Supabase Edge Function "intake" (secrets stored in Supabase, not here).
+
+NOT BUILT YET: Sourcing Opportunities list/detail pages, Visual Journal, homepage sections,
+staff dashboard. Their menu links will be added when those pages exist (no dead links).
+
+KNOWN ITEM: admin.html (old GitHub-token content editor) is still public. Recommend retiring it.
