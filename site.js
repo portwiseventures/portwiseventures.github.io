@@ -40,7 +40,7 @@
     var form = document.querySelector('form[data-formemail]');
     if (!form) return;
     var q = new URLSearchParams(window.location.search);
-    var brand = q.get('brand'), product = q.get('product'), type = q.get('type'), samples = q.get('samples');
+    var brand = q.get('brand'), product = q.get('product'), type = q.get('type'), samples = q.get('samples'), spec = q.get('spec');
     var msg = form.querySelector('[name="details"]');
     var brandField = form.querySelector('[name="brand"]');
     var sampleField = form.querySelector('[name="samples"]');
@@ -54,7 +54,7 @@
     if (msg && (type || q.get('interest'))) {
       var prefix = type === 'custom' ? 'Custom product request. ' : type === 'bulk' ? 'Bulk order enquiry. ' : '';
       prefix += q.get('interest') ? 'Enquiry type: ' + q.get('interest') + '. ' : '';
-      msg.value = prefix + msg.value;
+      msg.value = prefix + (spec ? spec + '\n\n' : '') + msg.value;
     }
   }
 
@@ -71,5 +71,6 @@
       }
     });
     load('site-content.json').then(function (map) { if (map && typeof map === 'object') applyContent(map); });
+    var langScript = document.createElement('script'); langScript.src = 'language.js'; document.body.appendChild(langScript);
   }
 })();
