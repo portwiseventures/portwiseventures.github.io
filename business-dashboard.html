@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="robots" content="noindex,nofollow,noarchive"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://hyvkkrfjiqmznpzpkosa.supabase.co; connect-src https://hyvkkrfjiqmznpzpkosa.supabase.co; base-uri 'none'; form-action 'none'"/>
+<meta name="referrer" content="no-referrer"/>
+<title>Portwise Staff Dashboard</title>
+<link rel="icon" href="favicon.png"/><link rel="stylesheet" href="dashboard.css"/>
+</head><body>
+<div id="login" class="login" hidden>
+  <form id="loginForm" class="lcard" autocomplete="on">
+    <div class="brand"><b>PORTWISE</b> VENTURES</div><h1>Staff sign in</h1>
+    <p class="muted">Authorised Portwise personnel only. Activity is logged.</p>
+    <label>Email<input id="lEmail" type="email" autocomplete="username" required></label>
+    <label>Password<input id="lPass" type="password" autocomplete="current-password" required></label>
+    <div id="lErr" class="err" role="alert"></div>
+    <button class="btn" id="lBtn" type="submit">Sign in</button>
+  </form>
+</div>
+<div id="app" class="app" hidden>
+  <header class="top"><button id="menuBtn" class="ghost" aria-label="Menu" aria-expanded="false">☰</button><div class="brand"><b>PORTWISE</b> STAFF</div>
+    <div class="grow"></div><span id="who" class="muted"></span><button id="logoutBtn" class="ghost">Sign out</button></header>
+  <nav id="side" class="side" aria-label="Dashboard sections"></nav>
+  <main id="main" class="main" tabindex="-1"></main>
+</div>
+<div id="drawer" class="drawer" hidden role="dialog" aria-modal="true" aria-label="Record details"><div class="dpanel"><div class="dbar"><button id="dClose" class="ghost">← Back</button><div class="grow"></div></div><div id="dBody" class="dbody"></div></div></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="pw-config.js"></script><script src="dashboard-core.js"></script><script src="dashboard-mods.js"></script>
+</body></html>
