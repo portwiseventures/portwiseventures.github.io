@@ -1,0 +1,13 @@
+Phase 3–5 content and integration notes
+
+Materials Library and Comparison: Material descriptions cite linked institutional sources. Properties and end-of-life are framed as product/supplier dependent. No Portwise-specific supplier availability is implied.
+
+Configurator: All options are requests subject to supplier feasibility. The user can export a text specification and prefill the existing quote form.
+
+Business Network Directory: No partner records are published because no approved partner data was provided. Add only authorized profiles to partners.json.
+
+Enquiry routing: The static site classifies the enquiry and labels it for the appropriate brand/type, but submits to the configured central FormSubmit inbox. Distinct secure routing/storage requires a backend and authorized destination addresses.
+
+Analytics: Event tracking is privacy-conscious and does not capture form field values. It remains inactive until an analytics provider/account is configured in site-config.json. GA4 requires consent under the existing banner; Plausible is supported by the existing configuration.
+
+Languages: The selector translates global navigation and the new Phase 3–5 interface, and enables RTL for Arabic. Legacy page bodies and legal/regulatory content are not fully translated; professional review is required before treating any translation as approved guidance.
