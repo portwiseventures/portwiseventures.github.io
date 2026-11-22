@@ -32,3 +32,6 @@ Requires third-party account/API/backend configuration before activation:
 - Live freight quotations: carrier/forwarder API and negotiated rate data required.
 
 The current site is static HTML/CSS/JavaScript. The existing FormSubmit forms continue to use site-config.json for the recipient email. Do not publish API secrets in client-side JavaScript; use a server-side endpoint for private credentials and stored customer data.
+
+
+Phase 3–5 delivery: see phase3-5-notes.txt and IMPLEMENTATION-REPORT.txt. No AI assistant was added.

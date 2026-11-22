@@ -9,3 +9,6 @@ Nothing is tracked today. To switch analytics on, edit site-config.json:
     "analytics": { "provider": "plausible", "id": "portwiseventures.com" }
 
 You need your own account and ID. A "Cookie settings" link then appears in the footer so visitors can change their choice.
+
+
+Privacy-conscious events added (no form values or contact details): product_page_visit, product_interest, product_shortlist_add, specification_download/resource_download, form_start, enquiry_submit, enquiry_success (thank-you page), country_guide_visit, and trade_statistics_search. Provider/account setup is still required; GA4 events are sent only after consent.

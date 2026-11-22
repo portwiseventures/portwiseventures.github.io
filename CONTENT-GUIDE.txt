@@ -10,3 +10,6 @@ logicwise.json     LOGICWISE services and verified case studies (services appear
 site-config.json   Contact details, form recipient and analytics settings.
 
 Only add information that has been verified.
+
+materials.json      Sourced material profiles for the library/comparison. Preserve source URLs and review dates.
+partners.json       Approved business partner profiles only; include category, description, authorized website/logo, and verification date.

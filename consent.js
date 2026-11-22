@@ -27,12 +27,36 @@
     a.onclick = function (e) { e.preventDefault(); set(''); banner(id); };
     var d = f.querySelector('div') || f; d.appendChild(document.createTextNode(' · ')); d.appendChild(a);
   }
+  var started = typeof WeakSet === 'function' ? new WeakSet() : null;
+  function track(name, props) {
+    if (window.__pwAnalyticsProvider === 'ga4' && get() === 'granted' && window.gtag) window.gtag('event', name, props || {});
+    if (window.__pwAnalyticsProvider === 'plausible' && window.plausible) window.plausible(name, { props: props || {} });
+  }
+  document.addEventListener('focusin', function (e) {
+    var f = e.target.closest && e.target.closest('form'); if (!f || (started && started.has(f))) return;
+    if (started) started.add(f); track('form_start', { form_id: f.id || 'form' });
+  });
+  document.addEventListener('submit', function (e) {
+    var f = e.target; if (!f || f.tagName !== 'FORM') return;
+    if (f.id === 'tsForm') track('trade_statistics_search', { page: 'trade-statistics' });
+    else if (f.id === 'smartEnquiry' || f.hasAttribute('data-formemail')) track('enquiry_submit', { form_id: f.id || 'enquiry' });
+  });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a'); if (!a) return; var href = a.getAttribute('href') || '';
+    if (/^(rfq-|.*\.(pdf|docx))(\?|$)/i.test(href)) track('resource_download', { resource: href.split('?')[0] });
+    else if (/specification|comparison|guide\.txt/i.test(a.download || '')) track('specification_download', { resource: a.download || 'download' });
+    else if (/^(product|marketplace|evara|agrinest|primecrest)\.html/i.test(href)) track('product_interest', { page: href.split('?')[0] });
+    else if (/import-requirements|trade-agreements|trade-statistics/.test(href)) track('trade_guide_visit', { page: href.split(/[?#]/)[0] });
+    if (a.hasAttribute('data-add-shortlist') || a.classList.contains('add-shortlist')) track('product_shortlist_add', {});
+    var button = e.target.closest && e.target.closest('button'); if (button && /shortlist/i.test(button.textContent)) track('product_shortlist_add', {});
+  });
   if (!window.fetch) return;
   fetch('site-config.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }).then(function (c) {
     var a = c && c.analytics; if (!a || !a.provider || !a.id) return;
-    if (a.provider === 'plausible' && /^[a-z0-9.-]+$/i.test(a.id)) { var s = document.createElement('script'); s.defer = true; s.setAttribute('data-domain', a.id); s.src = 'https://plausible.io/js/script.js'; document.head.appendChild(s); return; }
+    if (a.provider === 'plausible' && /^[a-z0-9.-]+$/i.test(a.id)) { window.__pwAnalyticsProvider = 'plausible'; var s = document.createElement('script'); s.defer = true; s.setAttribute('data-domain', a.id); s.src = 'https://plausible.io/js/script.js'; document.head.appendChild(s); track('page_view', { page: location.pathname }); if (/(product|marketplace|evara|agrinest|primecrest)\.html/i.test(location.pathname)) track('product_page_visit', { page: location.pathname.split('/').pop() }); if (/country|import-requirements/i.test(location.pathname)) track('country_guide_visit', { page: location.pathname.split('/').pop() }); if (/thanks\.html/i.test(location.pathname)) track('enquiry_success', { page: 'thanks' }); return; }
     if (a.provider !== 'ga4') return;
+    window.__pwAnalyticsProvider = 'ga4';
     footerLink(a.id);
-    var v = get(); if (v === 'granted') loadGA(a.id); else if (v !== 'denied') banner(a.id);
+    var v = get(); if (v === 'granted') { loadGA(a.id); track('page_view', { page: location.pathname }); if (/(product|marketplace|evara|agrinest|primecrest)\.html/i.test(location.pathname)) track('product_page_visit', { page: location.pathname.split('/').pop() }); if (/country|import-requirements/i.test(location.pathname)) track('country_guide_visit', { page: location.pathname.split('/').pop() }); if (/thanks\.html/i.test(location.pathname)) track('enquiry_success', { page: 'thanks' }); } else if (v !== 'denied') banner(a.id);
   });
 })();
