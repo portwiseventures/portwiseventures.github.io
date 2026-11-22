@@ -4,5 +4,7 @@
 window.PW = {
   supabaseUrl: 'https://hyvkkrfjiqmznpzpkosa.supabase.co',
   turnstileSiteKey: '0x4AAAAAAGNOgMhErV_ALm5S',
+  // PUBLIC read-only key (Supabase > Project Settings > API Keys > Publishable). Paste it between the quotes.
+  anonKey: 'sb_publishable_lxGQuil9W0afVdZbafaKwg_9OQhsKS8',
   intakeUrl: 'https://hyvkkrfjiqmznpzpkosa.supabase.co/functions/v1/intake'
 };
