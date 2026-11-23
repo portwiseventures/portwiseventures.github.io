@@ -30,6 +30,10 @@
       if (q) { oppField.value = q; var tag = document.getElementById('oppTag'); if (tag) tag.textContent = q; }
     }
 
+    // ---- prefill product name from a catalogue link (?product=...), text only
+    var pf = form.querySelector('[name=product_name]');
+    if (pf && !pf.value) { var pq = (new URLSearchParams(location.search).get('product') || '').replace(/[\u0000-\u001F]/g, '').trim().slice(0, 120); if (pq) pf.value = pq; }
+
     // ---- Turnstile
     function mountTS() {
       var box = form.querySelector('.ts-box'); if (!box || !CFG.turnstileSiteKey) return;

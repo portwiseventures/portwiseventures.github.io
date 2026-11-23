@@ -22,9 +22,33 @@
   // ---------- Products
   MODS.products = { title: 'Product Submissions', table: 'product_submissions', statusCol: 'product_status', order: 'created_at.desc', search: ['reference_number', 'product_name', 'company_name', 'supplier_country'], placeholder: 'Search product, supplier or reference',
     statuses: [['new_submission', 'New Submission'], ['under_review', 'Under Review'], ['additional_information_requested', 'Additional Information Requested'], ['shortlisted', 'Shortlisted'], ['approved', 'Approved'], ['rejected', 'Rejected'], ['published', 'Published'], ['archived', 'Archived']],
-    confirm: { published: 'Mark as Published? Products are never shown publicly by status alone yet: the public product catalogue is not connected to this status. Continue?' },
+    confirm: { published: 'Set status to Published? A product appears on the public website only when you also use "List in public catalogue" below.' },
     cols: [['Ref', function (r) { return r.reference_number; }], ['Product', function (r) { return r.product_name; }], ['Supplier', function (r) { return r.company_name; }], ['Country', function (r) { return r.supplier_country; }], ['Status', function (r) { return badge(r.product_status); }], ['Received', function (r) { return when(r.created_at, 1); }]],
     recordTitle: function (r) { return r.product_name; } };
+
+  MODS.products.actions = function (row, reload) {
+    var PUBB = 'portwise-public-assets', body = h('div'), box = D.section('Public catalogue listing', body), approved = row.product_status === 'approved' || row.product_status === 'published';
+    body.appendChild(h('p', { class: 'muted', text: 'If listed, the public sees ONLY: the name and summary you write here, category, origin, grade, packaging and the chosen image. Supplier name, contact details and prices are never shown.' }));
+    var nm = h('input', { maxlength: 120, value: row.catalogue_name || row.product_name || '', 'aria-label': 'Catalogue name' }), sm = h('textarea', { maxlength: 600, 'aria-label': 'Catalogue summary' }); sm.value = row.catalogue_summary || '';
+    body.appendChild(h('label', {}, 'Catalogue name', nm)); body.appendChild(h('label', {}, 'Catalogue summary (write it yourself, 1–3 sentences)', sm));
+    if (row.catalogue_image_path && /^[A-Za-z0-9_\-./]+$/.test(row.catalogue_image_path)) body.appendChild(h('img', { src: C.supabaseUrl + '/storage/v1/object/public/' + PUBB + '/' + row.catalogue_image_path.split('/').map(encodeURIComponent).join('/'), alt: 'Catalogue image', width: 200 }));
+    var imgs = h('div', {}); body.appendChild(h('h2', { text: 'Catalogue image' })); body.appendChild(imgs);
+    function setImage(blobPromise) { return blobPromise.then(function (b) { return resize(b, 1200, 0.82); }).then(function (jb) { var path = 'catalogue/' + row.id + '/' + crypto.randomUUID() + '.jpg'; return D.upload(PUBB, path, jb).then(function () { return patch('product_submissions', row.id, { catalogue_image_path: path }, 'Image saved.', reload); }); }).catch(function (e) { toast(e.message, true); }); }
+    api('/rest/v1/business_documents?entity_type=eq.product&entity_id=eq.' + row.id + '&document_category=eq.product_image&deleted_at=is.null&select=*').then(function (ds) {
+      if (!ds.length) imgs.appendChild(h('p', { class: 'muted', text: 'No product photos were submitted. Upload one below.' }));
+      ds.filter(function (d) { return /^image\//.test(d.mime_type || ''); }).forEach(function (d) { imgs.appendChild(h('div', { class: 'item acts' }, h('div', { class: 'grow', text: d.original_filename }), h('button', { class: 'btn sec sm', text: 'Use this image', onclick: function () { setImage(D.sign(d.storage_bucket, d.storage_path).then(function (u) { return fetch(u); }).then(function (r) { if (!r.ok) throw new Error('Could not read the image.'); return r.blob(); })); } }))); });
+    }).catch(function () { });
+    var up = h('input', { type: 'file', accept: 'image/jpeg,image/png,image/webp', 'aria-label': 'Upload catalogue image' });
+    body.appendChild(h('div', { class: 'acts' }, up, h('button', { class: 'btn sec sm', text: 'Upload image', onclick: function () { var f = up.files[0]; if (!f || !/^image\/(jpeg|png|webp)$/.test(f.type)) return toast('Choose a JPG, PNG or WebP image.', true); setImage(Promise.resolve(f)); } })));
+    var acts = h('div', { class: 'acts' });
+    acts.appendChild(h('button', { class: 'btn sec', text: 'Save text', onclick: function () { patch('product_submissions', row.id, { catalogue_name: nm.value.trim() || null, catalogue_summary: sm.value.trim() || null }, 'Saved.', reload); } }));
+    if (!row.is_in_catalogue) acts.appendChild(h('button', { class: 'btn gold', text: 'List in public catalogue', onclick: function () {
+      if (!approved) return toast('Set the status to Approved first.', true); if (!nm.value.trim() || !sm.value.trim()) return toast('Add a catalogue name and summary first.', true);
+      if (!confirm('List this product on the public website now?')) return; patch('product_submissions', row.id, { catalogue_name: nm.value.trim(), catalogue_summary: sm.value.trim(), is_in_catalogue: true, product_status: 'published' }, 'Listed in the public catalogue.', reload); } }));
+    else acts.appendChild(h('button', { class: 'btn warn', text: 'Remove from public catalogue', onclick: function () { if (!confirm('Remove this product from the public website?')) return; patch('product_submissions', row.id, { is_in_catalogue: false, product_status: 'approved' }, 'Removed from the catalogue.', reload); } }));
+    body.appendChild(h('p', {}, row.is_in_catalogue ? badge('published', 'Listed publicly') : badge('archived', approved ? 'Not listed' : 'Not eligible: approve first'))); body.appendChild(acts);
+    return box;
+  };
 
   // ---------- Responses
   MODS.responses = { title: 'Supplier Responses', table: 'opportunity_responses', select: '*,sourcing_opportunities(reference_number,title,product_name)', statusCol: 'response_status', order: 'created_at.desc', search: ['reference_number', 'company_name', 'supplier_name', 'product_name'], placeholder: 'Search supplier, product or reference', skip: ['sourcing_opportunities'],

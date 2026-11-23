@@ -1,22 +1,13 @@
-BUSINESS NETWORK ADDITION — what changed (Phase 2 front end)
+BUSINESS NETWORK EXPANSION — summary of changes (final)
 
-NEW FILES
- buyer-registration.html, supplier-registration.html, request-a-product.html,
- submit-a-product.html, supplier-response.html (reached from an opportunity with ?opp=OPP-2026-000001;
- not in the menu, noindex)
- network.css (form styles), network-forms.js (form engine), pw-config.js (PUBLIC config only)
+NEW PAGES: buyer-registration, supplier-registration, request-a-product, submit-a-product, supplier-response,
+ sourcing-opportunities, sourcing-opportunity, supplier-products, visual-journal, business-dashboard (staff, unlinked, noindex)
+NEW SCRIPTS/STYLES: pw-config.js (PUBLIC config only), network.css, network-forms.js, network-opps.js, network-journal.js,
+ network-catalogue.js, dashboard.css, dashboard-core.js, dashboard-mods.js
+CHANGED: menu rebuilt on every page (grouped columns; Trade Tools merged into Trade Intelligence & Tools; one Partner With Us),
+ style.css (menu CSS), nav.js, language.js (menu translations, fixed URL-based relabelling), index.html (Business Network, Opportunities and
+ Visual Journal sections), business-network.html (hub cards above the existing directory), privacy.html, sitemap.xml
+RETIRED: admin.html (now a notice page) and admin.js (backup supplied separately; do not publish)
 
-CHANGED FILES
- 58 existing pages: a "Business Network" dropdown was added to the main menu. Nothing removed.
- nav.js: removed a duplicate "Business Network" label from the Business menu (page still reachable
- from the new dropdown). sitemap.xml: 4 pages added.
-
-KEYS IN pw-config.js ARE PUBLIC BY DESIGN: Supabase project URL and Turnstile SITE key only.
-Never add a service_role key, secret key or Resend key to any file in this repository.
-
-FORMS TALK TO: Supabase Edge Function "intake" (secrets stored in Supabase, not here).
-
-NOT BUILT YET: Sourcing Opportunities list/detail pages, Visual Journal, homepage sections,
-staff dashboard. Their menu links will be added when those pages exist (no dead links).
-
-KNOWN ITEM: admin.html (old GitHub-token content editor) is still public. Recommend retiring it.
+NEVER add a service_role key, secret key, Resend key or Turnstile secret to any file in this repository.
+Backend (SQL, Edge Functions, docs) is delivered separately: see portwise_backend_and_docs.zip.
