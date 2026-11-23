@@ -195,7 +195,7 @@
     var nav = $('side'); nav.innerHTML = ''; D.NAV.forEach(function (n) { nav.appendChild(h('a', { href: '#/' + n[0], 'data-k': n[0], text: n[1] })); });
     api('/rest/v1/profiles?select=user_id,full_name,email').then(function (ps) { ps.forEach(function (p) { D.S.staff[p.user_id] = p.full_name || p.email; }); }).catch(function () { }).then(route);
   }
-  function showLogin(msg) { save(null); D.S.profile = null; $('app').hidden = true; $('login').hidden = false; $('lErr').textContent = msg || ''; $('lPass').value = ''; closeDrawer(); }
+  function showLogin(msg) { $('recForm').hidden = true; $('loginForm').hidden = false; $('lErr').className = 'err'; save(null); D.S.profile = null; $('app').hidden = true; $('login').hidden = false; $('lErr').textContent = msg || ''; $('lPass').value = ''; closeDrawer(); }
   function verify() {
     return api('/rest/v1/profiles?select=role,account_status,full_name&user_id=eq.' + D.S.user.id).then(function (r) {
       if (!r.length || r[0].role !== 'admin' || r[0].account_status !== 'active') throw new Error('This account does not have staff access.'); D.S.profile = r[0]; });
@@ -211,7 +211,33 @@
   window.addEventListener('hashchange', route);
   var idle; function bump() { clearTimeout(idle); if (D.S.session) idle = setTimeout(function () { showLogin('Signed out after 30 minutes of inactivity.'); }, IDLE_MS); }
   ['click', 'keydown', 'touchstart'].forEach(function (ev) { document.addEventListener(ev, bump, { passive: true }); });
+  // ---------- password reset (email link) + forgotten password
+  var REDIRECT = location.origin + location.pathname;
+  function pwOk(p, p2) { if (p.length < 12) return 'Use at least 12 characters.'; if (p !== p2) return 'The two passwords do not match.'; if (/^(.)\1+$/.test(p)) return 'Choose a less repetitive password.'; return ''; }
+  $('forgotBtn').addEventListener('click', function () {
+    var em = $('lEmail').value.trim(), box = $('lErr'); box.className = 'err';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)) { box.textContent = 'Type your email above first, then tap "Forgot password?".'; return; }
+    fetch(API + '/auth/v1/recover?redirect_to=' + encodeURIComponent(REDIRECT), { method: 'POST', headers: { apikey: KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ email: em }) })
+      .then(function (r) { box.className = r.ok ? 'ok' : 'err'; box.textContent = r.ok ? 'If that email has a staff account, a reset link has been sent. Check your inbox and spam.' : (r.status === 429 ? 'Please wait a minute before asking again.' : 'Could not send the reset email. Try again shortly.'); })
+      .catch(function () { box.textContent = 'Network error. Please try again.'; });
+  });
+  var recToken = null;
+  function readHash() {
+    var raw = location.hash.replace(/^#/, ''); if (raw.indexOf('=') < 0) return null; var q = new URLSearchParams(raw); if (!q.has('access_token') && !q.has('error')) return null;
+    var out = { token: q.get('access_token'), type: q.get('type'), err: q.get('error_description') || q.get('error') }; history.replaceState(null, '', location.pathname + location.search); return out; // tokens never stay in the address bar
+  }
+  $('recForm').addEventListener('submit', function (e) {
+    e.preventDefault(); var p = $('rPass').value, p2 = $('rPass2').value, bad = pwOk(p, p2), box = $('rErr'); if (bad) { box.textContent = bad; return; } var b = $('rBtn'); b.disabled = true; box.textContent = '';
+    fetch(API + '/auth/v1/user', { method: 'PUT', headers: { apikey: KEY, Authorization: 'Bearer ' + recToken, 'Content-Type': 'application/json' }, body: JSON.stringify({ password: p }) })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { if (!r.ok) throw new Error(j.msg || j.message || j.error_description || 'Could not set the password.'); }); })
+      .then(function () { recToken = null; $('rPass').value = ''; $('rPass2').value = ''; $('recForm').hidden = true; $('loginForm').hidden = false; $('lErr').className = 'ok'; $('lErr').textContent = 'Password updated. Please sign in with the new password.'; })
+      .catch(function (err) { box.textContent = err.message; }).then(function () { b.disabled = false; });
+  });
+  D.changePassword = function (p, p2) { var bad = pwOk(p, p2); if (bad) return Promise.reject(new Error(bad)); return api('/auth/v1/user', { method: 'PUT', body: { password: p } }); };
   D.boot = function () {
+    var hx = readHash();
+    if (hx && hx.token && (hx.type === 'recovery' || hx.type === 'invite')) { save(null); recToken = hx.token; $('login').hidden = false; $('app').hidden = true; $('loginForm').hidden = true; $('recForm').hidden = false; return; }
+    if (hx && hx.err) { showLogin('That link is invalid or has expired. Tap "Forgot password?" to get a new one.'); return; }
     var s = load(); if (!s || !API || !KEY) return showLogin(!KEY ? 'Dashboard is not configured.' : '');
     D.S.session = s; D.S.user = s.user; ensure().then(verify).then(function () { bump(); startApp(); }).catch(function () { showLogin(''); });
   };

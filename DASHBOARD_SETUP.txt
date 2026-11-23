@@ -1,41 +1,20 @@
-PORTWISE STAFF DASHBOARD — SETUP
+PORTWISE STAFF DASHBOARD — UPDATE (v3.1)
 
-1. SUPABASE: run portwise_migration_v3_dashboard.sql once in the SQL Editor (after v2 and v2.1).
-2. UPLOAD these 4 files to the repo root on GitHub (same place as index.html):
-     business-dashboard.html   dashboard.css   dashboard-core.js   dashboard-mods.js
-3. OPEN: https://portwiseventures.com/business-dashboard.html  (bookmark it; it is not linked anywhere on the site)
-4. SIGN IN with your staff email + password (the Supabase user you made admin).
+STEP 1 (Supabase SQL Editor) — fixes "permission denied for table profiles"
+   Run portwise_migration_v3_1_table_grants.sql once. Then check:
+      select email, role from public.profiles;
+   You should see your accounts. The account you sign in with must show role = admin.
+   (If it says member:  update public.profiles set role='admin' where email='YOUR_EMAIL';)
 
-TURN ON TWO-FACTOR (recommended, in Supabase): Authentication > Sign In / Providers > Multi-Factor.
-Also: Authentication > Policies > set a minimum password length of 12 and enable leaked-password protection.
+STEP 2 (GitHub) — upload these 4 files to the repo root (replace the old ones):
+   business-dashboard.html  dashboard.css  dashboard-core.js  dashboard-mods.js
 
-WHAT YOU CAN DO
- Overview ........ counts + recent submissions
- Buyers/Suppliers  review, change status (approval is logged), notes, documents
- Opportunities ... create, edit, publish, unpublish, close, reopen, mark fulfilled, archive, feature/urgent, image
- Responses ....... list + side-by-side Compare per opportunity (lowest price per currency outlined)
- Buyer Requests .. review, and "Create opportunity from this request" (draft, buyer name NOT copied)
- Products ........ review and set status
- Documents ....... every uploaded file; Open = 5-minute signed link
- Activity ........ full history; Settings = supplier-approval rule, alert email, staff roles, email queue
- CSV export on every list (formula-injection safe).
+STEP 3 (Supabase > Authentication > URL Configuration)
+   Site URL:        https://portwiseventures.com
+   Redirect URLs:   add  https://portwiseventures.com/business-dashboard.html
+   Save. (The old reset email pointed to a default address that does not open. This fixes new emails.)
 
-SECURITY NOTES
- - The page contains NO secrets. Data access is enforced by Supabase Row Level Security: even if someone
-   opens the page, a non-admin login sees nothing. Tested with a mocked backend; confirm with a real
-   non-admin account (see test list).
- - Sessions live only in the browser tab (sessionStorage) and end after 30 minutes idle.
- - Content-Security-Policy blocks all third-party scripts on this page.
-
-NOT BUILT YET
- - Media management (comes with the Visual Journal).
- - Public product catalogue publishing (status "Published" is recorded only).
- - Staff-only logging of CSV exports (the database has no insert path for that yet).
-
-REAL-WORLD TEST LIST
- [ ] Sign in with your admin account.            [ ] A second, non-admin test user is refused.
- [ ] Submit a real buyer form; it appears in Buyers within seconds.
- [ ] Change its status; Activity shows "Status changed" with your name.
- [ ] Open an uploaded document (new tab, signed link).
- [ ] Create a draft opportunity, publish it, confirm it shows on /sourcing-opportunities.html.
- [ ] Submit a supplier response; compare two responses.
+STEP 4 — Change/reset the password
+   A. Forgot it:  open the dashboard > type your email > tap "Forgot password?" > open the email link
+      > choose a new password (12+ characters).
+   B. Signed in:  Settings > "My account: change password".

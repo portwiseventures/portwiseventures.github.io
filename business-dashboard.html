@@ -15,6 +15,15 @@
     <label>Password<input id="lPass" type="password" autocomplete="current-password" required></label>
     <div id="lErr" class="err" role="alert"></div>
     <button class="btn" id="lBtn" type="submit">Sign in</button>
+    <button class="linkbtn" id="forgotBtn" type="button">Forgot password?</button>
+  </form>
+  <form id="recForm" class="lcard" hidden autocomplete="off" novalidate>
+    <div class="brand"><b>PORTWISE</b> VENTURES</div><h1>Set a new password</h1>
+    <p class="muted">Use at least 12 characters. A passphrase of several words works well.</p>
+    <label>New password<input id="rPass" type="password" autocomplete="new-password" minlength="12" required></label>
+    <label>Confirm new password<input id="rPass2" type="password" autocomplete="new-password" minlength="12" required></label>
+    <div id="rErr" class="err" role="alert"></div>
+    <button class="btn" id="rBtn" type="submit">Save new password</button>
   </form>
 </div>
 <div id="app" class="app" hidden>
