@@ -144,6 +144,97 @@
     cols: [['When', function (r) { return when(r.created_at); }], ['Action', function (r) { return human(r.action); }], ['Record type', function (r) { return r.entity_type ? human(r.entity_type) : ''; }], ['Detail', function (r) { var d = r.details || {}; return d.from ? human(d.from) + ' → ' + human(d.to) : (d.reference || d.filename || ''); }], ['By', function (r) { return D.S.staff[r.actor_user_id] || (r.actor_user_id ? 'Staff' : 'Website submission'); }]],
     rowOpen: function (r) { if (ENTMOD[r.entity_type] && r.entity_id) { location.hash = '#/' + ENTMOD[r.entity_type]; setTimeout(function () { D.openRecord(ENTMOD[r.entity_type], r.entity_id); }, 50); } } };
 
+  // ---------- Visual Journal: media + albums
+  var JCATS = [['products', 'Products'], ['agriculture', 'Agriculture'], ['sourcing_production', 'Sourcing & Production'], ['processing_packaging', 'Processing & Packaging'], ['logistics_trade', 'Logistics & Trade'], ['business_events', 'Business & Events'], ['behind_the_scenes', 'Behind the Scenes']];
+  var JBRANDS = [['portwise', 'Portwise'], ['evara', 'EVARA'], ['agrinest', 'AGRINEST'], ['primecrest', 'PRIME CREST'], ['logicwise', 'LOGICWISE']];
+  var JB = 'portwise-journal', JURL = C.supabaseUrl + '/storage/v1/object/public/' + JB + '/';
+  function jpub(p) { return p && /^[A-Za-z0-9_\-./]+$/.test(p) ? JURL + p.split('/').map(encodeURIComponent).join('/') : ''; }
+  function lab(list, v) { for (var i = 0; i < list.length; i++) if (list[i][0] === v) return list[i][1]; return v || ''; }
+  function opts(list, cur, blank) { return [h('option', { value: '', text: blank })].concat(list.map(function (o) { return h('option', { value: o[0], text: o[1], selected: cur === o[0] }); })); }
+  function resize(file, max, q) {
+    return createImageBitmap(file).then(function (bm) { var s = Math.min(1, max / Math.max(bm.width, bm.height)), w = Math.max(1, Math.round(bm.width * s)), ht = Math.max(1, Math.round(bm.height * s)), c = document.createElement('canvas'); c.width = w; c.height = ht;
+      var x = c.getContext('2d'); x.fillStyle = '#fff'; x.fillRect(0, 0, w, ht); x.drawImage(bm, 0, 0, w, ht); if (bm.close) bm.close();
+      return new Promise(function (res, rej) { c.toBlob(function (b) { b ? res(b) : rej(new Error('Could not process this image.')); }, 'image/jpeg', q); }); });
+  }
+  function safe(n) { return n.replace(/\.[^.]+$/, '').replace(/[^A-Za-z0-9_-]/g, '_').slice(0, 50) || 'file'; }
+  function niceTitle(n) { return n.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ').trim().slice(0, 120); }
+  function jbadge(on) { return h('span', { class: 'st ' + (on ? 'g' : ''), text: on ? 'Published' : 'Draft' }); }
+  function albumsList() { return api('/rest/v1/journal_albums?select=id,title,is_published&order=title.asc'); }
+
+  MODS.media = { title: 'Media Management', table: 'journal_media', select: '*,journal_albums(title)', statusCol: 'is_published', statuses: [['true', 'Published'], ['false', 'Unpublished']], order: 'sort_order.asc,created_at.desc', search: ['title', 'caption', 'description', 'country'], placeholder: 'Search title, caption or country',
+    onNew: function () { mediaUpload(); }, rowOpen: function (r) { mediaEdit(r.id); },
+    cols: [['Preview', function (r) { var u = jpub(r.thumbnail_path) || (r.media_type === 'image' ? jpub(r.media_path) : ''); return u ? h('img', { src: u, alt: '', width: 56, height: 42 }) : h('span', { text: r.media_type === 'video' ? '🎞 video' : '' }); }], ['Title', function (r) { return r.title || r.caption || '(untitled)'; }], ['Type', function (r) { return human(r.media_type); }],
+      ['Category', function (r) { return lab(JCATS, r.category); }], ['Brand', function (r) { return lab(JBRANDS, r.brand); }], ['Album', function (r) { return r.journal_albums ? r.journal_albums.title : ''; }], ['Status', function (r) { return jbadge(r.is_published); }], ['★', function (r) { return r.is_featured ? '★' : ''; }], ['Order', function (r) { return String(r.sort_order); }]] };
+
+  function mediaUpload() {
+    var body = D.$('dBody'); D.$('drawer').hidden = false; body.innerHTML = ''; body.appendChild(h('h1', { text: 'Upload media' }));
+    body.appendChild(h('p', { class: 'muted', text: 'Everything uploads as an unpublished DRAFT. Photos are resized for the web and location data is removed. Videos: MP4 or WebM up to 50 MB.' }));
+    var file = h('input', { type: 'file', multiple: true, accept: 'image/jpeg,image/png,image/webp,video/mp4,video/webm', 'aria-label': 'Photos or videos' }), cat = h('select', { 'aria-label': 'Category' }, opts(JCATS, '', 'Category (optional)')), br = h('select', { 'aria-label': 'Brand' }, opts(JBRANDS, '', 'Brand (optional)')),
+      alb = h('select', { 'aria-label': 'Album' }, h('option', { value: '', text: 'No album' })), ctry = h('input', { placeholder: 'Country (optional)', maxlength: 80 }), tags = h('input', { placeholder: 'Tags, separated by commas', maxlength: 200 });
+    albumsList().then(function (as) { as.forEach(function (a) { alb.appendChild(h('option', { value: a.id, text: a.title + (a.is_published ? '' : ' (unpublished)') })); }); }).catch(function () { });
+    var out = h('div', { class: 'item' }), go = h('button', { class: 'btn', text: 'Upload', onclick: function () {
+      var fs = Array.prototype.slice.call(file.files); if (!fs.length) return toast('Choose at least one file.', true); var bad = fs.filter(function (f) { return !/^(image\/(jpeg|png|webp)|video\/(mp4|webm))$/.test(f.type) || (f.type.indexOf('video/') === 0 ? f.size > 52428800 : f.size > 26214400); });
+      if (bad.length) return toast('Not allowed or too large: ' + bad.map(function (f) { return f.name; }).join(', '), true);
+      go.disabled = true; out.innerHTML = ''; var done = 0, fail = [], chain = Promise.resolve(), tg = tags.value.split(',').map(function (t) { return t.trim().toLowerCase(); }).filter(Boolean).slice(0, 20), yr = new Date().getFullYear();
+      fs.forEach(function (f, i) { chain = chain.then(function () {
+        go.textContent = 'Uploading ' + (i + 1) + ' of ' + fs.length + '…'; var id = crypto.randomUUID(), base = 'media/' + yr + '/' + id + '-' + safe(f.name), isVid = f.type.indexOf('video/') === 0, row = { media_type: isVid ? 'video' : 'image', title: niceTitle(f.name), alt_text: niceTitle(f.name), is_published: false, category: cat.value || null, brand: br.value || null, album_id: alb.value || null, country: ctry.value.trim() || null, tags: tg, sort_order: 0 };
+        if (isVid) { row.media_path = base + '.' + (f.type === 'video/webm' ? 'webm' : 'mp4'); return D.upload(JB, row.media_path, f).then(function () { return api('/rest/v1/journal_media', { method: 'POST', headers: { Prefer: 'return=minimal' }, body: row }); }); }
+        row.media_path = base + '.jpg'; row.thumbnail_path = base + '-thumb.jpg';
+        return Promise.all([resize(f, 2000, 0.85), resize(f, 700, 0.8)]).then(function (b) { return D.upload(JB, row.media_path, b[0]).then(function () { return D.upload(JB, row.thumbnail_path, b[1]); }); }).then(function () { return api('/rest/v1/journal_media', { method: 'POST', headers: { Prefer: 'return=minimal' }, body: row }); });
+      }).then(function () { done++; }).catch(function (e) { fail.push(f.name + ': ' + e.message); }); });
+      chain.then(function () { go.disabled = false; go.textContent = 'Upload'; file.value = ''; out.appendChild(h('div', { class: done ? 'ok' : 'err', text: done + ' uploaded as drafts' + (fail.length ? ', ' + fail.length + ' failed.' : '.') })); fail.forEach(function (x) { out.appendChild(h('div', { class: 'err', text: x })); }); if (done) { toast('Uploaded. Review and publish each item.'); if (D.refreshList) D.refreshList(); } });
+    } });
+    body.appendChild(h('div', { class: 'panel' }, h('label', {}, 'Files', file), h('div', { class: 'row2' }, cat, br, alb, ctry), tags, h('div', { class: 'acts' }, go, h('button', { class: 'btn sec', text: 'Close', onclick: function () { D.closeDrawer(); } })), out));
+  }
+
+  function mediaEdit(id) {
+    var body = D.$('dBody'); D.$('drawer').hidden = false; body.innerHTML = ''; body.appendChild(h('p', { class: 'muted', text: 'Loading…' }));
+    Promise.all([api('/rest/v1/journal_media?select=*&id=eq.' + id), albumsList()]).then(function (r) {
+      var m = r[0][0]; if (!m) throw new Error('Media not found.'); var as = r[1]; body.innerHTML = '';
+      body.appendChild(h('div', { class: 'acts' }, h('h1', { text: m.title || m.caption || 'Media' }), jbadge(m.is_published)));
+      var pv = jpub(m.media_path); body.appendChild(h('div', { class: 'panel' }, m.media_type === 'video' ? h('video', { src: pv, controls: true, preload: 'metadata', width: 320, poster: jpub(m.thumbnail_path) || null }) : h('img', { src: pv, alt: m.alt_text || '', width: 320 })));
+      var F = {}; function inp(k, label, area, type) { var el = area ? h('textarea', { maxlength: 2000 }) : h('input', { type: type || 'text', maxlength: 300 }); el.value = m[k] == null ? '' : (k === 'tags' ? (m.tags || []).join(', ') : m[k]); F[k] = el; return h('label', {}, label, el); }
+      var catS = h('select', {}, opts(JCATS, m.category, 'No category')), brS = h('select', {}, opts(JBRANDS, m.brand, 'No brand')), alS = h('select', {}, [h('option', { value: '', text: 'No album' })].concat(as.map(function (a) { return h('option', { value: a.id, text: a.title + (a.is_published ? '' : ' (unpublished)'), selected: m.album_id === a.id }); })));
+      var feat = h('input', { type: 'checkbox' }); feat.checked = !!m.is_featured;
+      body.appendChild(h('div', { class: 'panel' }, h('div', { class: 'row2' }, inp('title', 'Title'), inp('country', 'Country')), inp('caption', 'Caption (shown on the public page)', true), inp('description', 'Description', true), inp('alt_text', 'Alt text (describes the image for screen readers)'), inp('tags', 'Tags (comma separated)'),
+        h('div', { class: 'row2' }, h('label', {}, 'Category', catS), h('label', {}, 'Brand', brS), h('label', {}, 'Album', alS), inp('sort_order', 'Display order (lower shows first)', false, 'number')), h('label', { class: 'ck' }, feat, 'Featured (shown in the Featured section)')));
+      function collect() { var o = { title: F.title.value.trim() || null, country: F.country.value.trim() || null, caption: F.caption.value.trim() || null, description: F.description.value.trim() || null, alt_text: F.alt_text.value.trim() || null, tags: F.tags.value.split(',').map(function (t) { return t.trim().toLowerCase(); }).filter(Boolean).slice(0, 20), category: catS.value || null, brand: brS.value || null, album_id: alS.value || null, sort_order: parseInt(F.sort_order.value, 10) || 0, is_featured: feat.checked }; return o; }
+      function reload() { mediaEdit(id); if (D.refreshList) D.refreshList(); }
+      var acts = h('div', { class: 'acts' });
+      acts.appendChild(h('button', { class: 'btn', text: 'Save changes', onclick: function () { patch('journal_media', id, collect(), 'Saved.', reload); } }));
+      acts.appendChild(h('button', { class: m.is_published ? 'btn sec' : 'btn gold', text: m.is_published ? 'Unpublish' : 'Publish', onclick: function () {
+        var p = collect(); p.is_published = !m.is_published;
+        if (p.is_published) { var al = as.filter(function (a) { return a.id === p.album_id; })[0]; if (al && !al.is_published && !confirm('This album is not published, so the item stays hidden until the album is published. Continue?')) return; if (!confirm('Publish this to the public Visual Journal?')) return; } patch('journal_media', id, p, p.is_published ? 'Published.' : 'Unpublished.', reload); } }));
+      acts.appendChild(h('button', { class: 'btn sec', text: 'Move to top', onclick: function () { api('/rest/v1/journal_media?select=sort_order&order=sort_order.asc&limit=1').then(function (r2) { var top = r2.length ? r2[0].sort_order - 1 : 0; patch('journal_media', id, { sort_order: top }, 'Moved to the top.', reload); }); } }));
+      body.appendChild(h('div', { class: 'panel' }, acts));
+      if (m.media_type === 'video') { var pf = h('input', { type: 'file', accept: 'image/jpeg,image/png,image/webp', 'aria-label': 'Poster image' }); body.appendChild(D.section('Video poster image', h('div', { class: 'acts' }, pf, h('button', { class: 'btn sec sm', text: 'Upload poster', onclick: function () { var f = pf.files[0]; if (!f || !/^image\/(jpeg|png|webp)$/.test(f.type)) return toast('Choose a JPG, PNG or WebP image.', true);
+        var path = 'media/' + new Date().getFullYear() + '/' + crypto.randomUUID() + '-poster.jpg'; resize(f, 1200, 0.82).then(function (b) { return D.upload(JB, path, b); }).then(function () { return patch('journal_media', id, { thumbnail_path: path }, 'Poster saved.', reload); }).catch(function (e) { toast(e.message, true); }); } })))); }
+      body.appendChild(h('div', { class: 'panel acts' }, h('button', { class: 'btn warn', text: 'Delete permanently', onclick: function () {
+        if (!confirm('Permanently delete this media and its files? This cannot be undone.')) return; var pre = [m.media_path].concat(m.thumbnail_path ? [m.thumbnail_path] : []);
+        api('/storage/v1/object/' + JB, { method: 'DELETE', body: { prefixes: pre } }).then(function () { return api('/rest/v1/journal_media?id=eq.' + id, { method: 'DELETE', headers: { Prefer: 'return=minimal' } }); }).then(function () { toast('Deleted.'); D.closeDrawer(); if (D.refreshList) D.refreshList(); }).catch(function (e) { toast(e.message, true); }); } }), h('button', { class: 'btn sec', text: 'Close', onclick: function () { D.closeDrawer(); } })));
+    }).catch(function (e) { body.innerHTML = ''; body.appendChild(h('p', { class: 'err', text: e.message })); });
+  }
+
+  MODS.albums = { title: 'Albums', table: 'journal_albums', select: '*,journal_media(count)', statusCol: 'is_published', statuses: [['true', 'Published'], ['false', 'Unpublished']], order: 'sort_order.asc,created_at.desc', search: ['title', 'slug', 'description'], placeholder: 'Search albums',
+    onNew: function () { albumForm(null); }, rowOpen: function (r) { albumForm(r); },
+    cols: [['Title', function (r) { return r.title; }], ['Slug', function (r) { return r.slug; }], ['Items', function (r) { return String(r.journal_media && r.journal_media[0] ? r.journal_media[0].count : 0); }], ['Status', function (r) { return jbadge(r.is_published); }], ['★', function (r) { return r.is_featured ? '★' : ''; }], ['Order', function (r) { return String(r.sort_order); }]] };
+  function albumForm(a) {
+    var body = D.$('dBody'); D.$('drawer').hidden = false; body.innerHTML = ''; body.appendChild(h('h1', { text: a ? 'Edit album' : 'New album' })); a = a || {};
+    var t = h('input', { value: a.title || '', maxlength: 120 }), sl = h('input', { value: a.slug || '', maxlength: 80, placeholder: 'auto-filled from title' }), de = h('textarea', { maxlength: 1000 }), so = h('input', { type: 'number', value: a.sort_order || 0 }), ft = h('input', { type: 'checkbox' }), pb = h('input', { type: 'checkbox' }), cv = h('input', { type: 'file', accept: 'image/jpeg,image/png,image/webp', 'aria-label': 'Cover image' }), err = h('div', { class: 'err', role: 'alert' });
+    de.value = a.description || ''; ft.checked = !!a.is_featured; pb.checked = !!a.is_published;
+    body.appendChild(h('div', { class: 'panel' }, h('label', {}, 'Title *', t), h('label', {}, 'Web address name (slug)', sl), h('label', {}, 'Description', de), h('label', {}, 'Display order (lower first)', so), h('label', {}, 'Cover image (optional)', cv), h('label', { class: 'ck' }, ft, 'Featured'), h('label', { class: 'ck' }, pb, 'Published (visible on the website)'), err,
+      h('div', { class: 'acts' }, h('button', { class: 'btn', text: 'Save album', onclick: function () {
+        err.textContent = ''; var title = t.value.trim(); if (!title) return err.textContent = 'Title is required.'; var slug = (sl.value.trim() || title).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, ''); if (!slug) return err.textContent = 'Slug needs letters or numbers.';
+        var o = { title: title, slug: slug, description: de.value.trim() || null, sort_order: parseInt(so.value, 10) || 0, is_featured: ft.checked, is_published: pb.checked }, f = cv.files[0];
+        if (f && !/^image\/(jpeg|png|webp)$/.test(f.type)) return err.textContent = 'Cover must be JPG, PNG or WebP.';
+        var pre = f ? resize(f, 1600, 0.82).then(function (b) { var path = 'albums/' + crypto.randomUUID() + '-' + safe(f.name) + '.jpg'; return D.upload(JB, path, b).then(function () { o.cover_image_path = path; }); }) : Promise.resolve();
+        pre.then(function () { return a.id ? api('/rest/v1/journal_albums?id=eq.' + a.id, { method: 'PATCH', headers: { Prefer: 'return=minimal' }, body: o }) : api('/rest/v1/journal_albums', { method: 'POST', headers: { Prefer: 'return=minimal' }, body: Object.assign({ created_by: D.S.user.id }, o) }); })
+          .then(function () { toast('Album saved.'); D.closeDrawer(); if (D.refreshList) D.refreshList(); }).catch(function (e) { err.textContent = /duplicate|unique/i.test(e.message) ? 'That slug is already used. Choose another.' : e.message; }); } }),
+        a.id ? h('button', { class: 'btn warn', text: 'Delete album', onclick: function () { var n = a.journal_media && a.journal_media[0] ? a.journal_media[0].count : 0; if (n > 0) return toast('This album has ' + n + ' item(s). Move or delete them first.', true); if (!confirm('Delete this album?')) return;
+          api('/rest/v1/journal_albums?id=eq.' + a.id, { method: 'DELETE', headers: { Prefer: 'return=minimal' } }).then(function () { toast('Deleted.'); D.closeDrawer(); if (D.refreshList) D.refreshList(); }).catch(function (e) { toast(e.message, true); }); } }) : null,
+        h('button', { class: 'btn sec', text: 'Cancel', onclick: function () { D.closeDrawer(); } }))));
+  }
+
   // ---------- Overview + Settings
   D.views = {};
   var STATS = [['total_buyers', 'Total buyers', 'buyers', ''], ['total_suppliers', 'Total suppliers', 'suppliers', ''], ['pending_registrations', 'Pending registrations', 'buyers', 'new_registration'], ['verified_buyers', 'Verified buyers', 'buyers', 'verified'], ['approved_suppliers', 'Approved suppliers', 'suppliers', 'approved'],
@@ -182,6 +273,6 @@
       rows.forEach(function (m) { s3.appendChild(h('div', { class: 'item' }, h('div', { text: m.subject }), h('small', { text: m.recipient_email + ' · ' + m.email_status + ' · attempts ' + m.attempt_count + ' · ' + when(m.created_at) + (m.last_error ? ' · ' + m.last_error : '') }))); }); }).catch(function (e) { s3.textContent = e.message; });
   };
 
-  D.NAV = [['overview', 'Overview'], ['buyers', 'Buyers'], ['suppliers', 'Suppliers'], ['opportunities', 'Sourcing Opportunities'], ['responses', 'Supplier Responses'], ['requests', 'Buyer Requests'], ['products', 'Product Submissions'], ['documents', 'Documents'], ['activity', 'Activity History'], ['settings', 'Settings']];
+  D.NAV = [['overview', 'Overview'], ['buyers', 'Buyers'], ['suppliers', 'Suppliers'], ['opportunities', 'Sourcing Opportunities'], ['responses', 'Supplier Responses'], ['requests', 'Buyer Requests'], ['products', 'Product Submissions'], ['documents', 'Documents'], ['media', 'Media Management'], ['albums', 'Albums'], ['activity', 'Activity History'], ['settings', 'Settings']];
   D.boot();
 })();

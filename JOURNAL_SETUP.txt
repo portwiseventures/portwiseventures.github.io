@@ -1,0 +1,21 @@
+PORTWISE VISUAL JOURNAL — SETUP
+
+1. SUPABASE SQL EDITOR: run portwise_migration_v4_visual_journal.sql once.
+2. GITHUB: upload ALL files in this zip to the repo root (73 files, under the 100 limit).
+   They include the updated menu on every page, so replace when asked.
+   New: visual-journal.html, network-journal.js.  Updated: network.css, dashboard files, homepage, nav on all pages.
+3. ADD CONTENT (dashboard > Media Management > + New):
+   - choose photos/videos, set category / brand / country / album / tags, Upload (saved as DRAFTS)
+   - open each item, add a caption (required to publish) and alt text, then Publish
+   - Albums: create and publish an album first if you want to group items
+4. VIEW: portwiseventures.com/visual-journal.html and the homepage "Visual Journal" strip.
+
+RULES BUILT IN
+ - Nothing is public until you press Publish. The database also blocks publishing without a title or caption.
+ - Photos are resized in your browser (2000px + a 700px thumbnail) and re-encoded, which removes GPS/location data.
+ - Videos: MP4 or WebM, max 50 MB (Supabase free plan limit). Add a poster image for a nicer preview.
+ - No sample images are included: until you publish something, visitors see "The Visual Journal is being curated."
+
+KNOWN LIMITATION
+ Files live in a public bucket, so an UNPUBLISHED file could be opened by someone who knew its exact
+ (random) web address. Do not upload anything confidential to the Journal. Private documents belong in Documents.
