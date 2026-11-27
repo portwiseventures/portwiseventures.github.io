@@ -2,9 +2,22 @@
    No third-party scripts. Every value from the database is inserted with textContent. */
 (function () {
   'use strict';
-  if (window.top !== window.self) { document.body.textContent = ''; return; } // anti-clickjacking
+  // Anti-clickjacking: the dashboard refuses to be framed, EXCEPT by the Portwise app's own origins (PW.embedOrigins).
+  var EMBED = false, PARENT = '';
+  if (window.top !== window.self) {
+    var ao = location.ancestorOrigins, allow = (window.PW && window.PW.embedOrigins) || [];
+    if (!(ao && ao.length === 1 && allow.indexOf(ao[0]) > -1)) { document.body.textContent = ''; return; }
+    EMBED = true; PARENT = ao[0] === 'file://' ? '*' : ao[0]; document.documentElement.classList.add('embed');
+  }
   var C = window.PW || {}, API = C.supabaseUrl, KEY = C.anonKey, SK = 'pw_staff_session', PAGE = 25, IDLE_MS = 30 * 60 * 1000;
   var D = window.PWD = { S: { session: null, user: null, profile: null, staff: {} }, MODS: {} };
+  // Inside the app, opening a document or saving a file is handed to the app (it only ever SENDS messages; it never listens).
+  D.embed = EMBED;
+  D.openUrl = function (u) { if (EMBED) parent.postMessage({ source: 'portwise-dashboard', type: 'open-url', url: u }, PARENT); else window.open(u, '_blank', 'noopener'); };
+  D.saveFile = function (name, mime, text) {
+    if (EMBED) { parent.postMessage({ source: 'portwise-dashboard', type: 'save-file', name: name, mime: mime, text: text }, PARENT); return; }
+    var a = h('a', { href: URL.createObjectURL(new Blob([text], { type: mime })), download: name }); document.body.appendChild(a); a.click(); a.remove();
+  };
 
   // ---------- tiny DOM helper
   function h(tag, a) {
@@ -71,7 +84,7 @@
       if (!rows.length) return toast('Nothing to export.', true);
       var keys = Object.keys(rows[0]).filter(function (k) { var v = rows[0][k]; return v === null || typeof v !== 'object' || Array.isArray(v); });
       var csv = [keys.map(csvCell).join(',')].concat(rows.map(function (r) { return keys.map(function (k) { return csvCell(r[k]); }).join(','); })).join('\r\n');
-      var a = h('a', { href: URL.createObjectURL(new Blob([csv], { type: 'text/csv' })), download: m.table + '-' + new Date().toISOString().slice(0, 10) + '.csv' }); document.body.appendChild(a); a.click(); a.remove();
+      D.saveFile(m.table + '-' + new Date().toISOString().slice(0, 10) + '.csv', 'text/csv', csv);
       toast('Exported ' + rows.length + ' rows.');
     }).catch(function (e) { toast(e.message, true); });
   }
@@ -141,7 +154,7 @@
     function refreshDocs() { api('/rest/v1/business_documents?' + qs({ entity_type: 'eq.' + entity, entity_id: 'eq.' + id, deleted_at: 'is.null', order: 'created_at.desc', select: '*' })).then(function (rows) {
       list.innerHTML = ''; if (!rows.length) list.appendChild(h('p', { class: 'muted', text: 'No documents.' }));
       rows.forEach(function (d) { list.appendChild(h('div', { class: 'item acts' }, h('div', { class: 'grow' }, h('div', { text: d.original_filename }), h('small', { text: [human(d.document_category || 'other'), d.file_size_bytes ? fsize(d.file_size_bytes) : '', when(d.created_at)].filter(Boolean).join(' · ') })),
-        h('button', { class: 'btn sec sm', text: 'Open', onclick: function () { D.sign(d.storage_bucket, d.storage_path).then(function (u) { window.open(u, '_blank', 'noopener'); }).catch(function (e) { toast(e.message, true); }); } }),
+        h('button', { class: 'btn sec sm', text: 'Open', onclick: function () { D.sign(d.storage_bucket, d.storage_path).then(function (u) { D.openUrl(u); }).catch(function (e) { toast(e.message, true); }); } }),
         h('button', { class: 'btn sec sm', text: 'Remove', onclick: function () { if (!confirm('Remove "' + d.original_filename + '" from this record? (It is hidden, not erased.)')) return; api('/rest/v1/business_documents?id=eq.' + d.id, { method: 'PATCH', headers: { Prefer: 'return=minimal' }, body: { deleted_at: new Date().toISOString() } }).then(function () { refreshDocs(); toast('Removed.'); }).catch(function (e) { toast(e.message, true); }); } }))); }); }).catch(function (e) { list.textContent = e.message; }); }
     var up = h('button', { class: 'btn sm', text: 'Upload', onclick: function () {
       var f = file.files[0]; if (!f) return toast('Choose a file first.', true); if (!OKT[f.type]) return toast('File type not allowed (PDF, Word, Excel, JPG, PNG, WebP, MP4, WebM).', true);

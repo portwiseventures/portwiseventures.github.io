@@ -1,0 +1,791 @@
+{
+ "site": {
+  "name": "Portwise Ventures",
+  "base": "https://portwiseventures.com",
+  "disclaimer": "General information for businesses, not legal, tax or customs advice. Rules change and depend on the product and destination: always confirm with the official authority or a licensed customs broker."
+ },
+ "categories": [
+  {
+   "id": "market-insights",
+   "title": "Export Market Insights",
+   "slug": "intelligence-market-insights.html",
+   "desc": "How to research, size and choose export markets, with the data sources professionals use."
+  },
+  {
+   "id": "commodity-trends",
+   "title": "Commodity Trends",
+   "slug": "intelligence-commodity-trends.html",
+   "desc": "What moves commodity prices and where to follow them. Live price context is in the Global Commodity Monitor."
+  },
+  {
+   "id": "regulations",
+   "title": "Import–Export Regulations & Practice",
+   "slug": "intelligence-regulations.html",
+   "desc": "Incoterms, classification codes, documents, origin rules, payment terms and quality checks explained plainly."
+  },
+  {
+   "id": "country-trade",
+   "title": "Country Trade Information",
+   "slug": "intelligence-country-trade.html",
+   "desc": "First steps for importing into major markets, with links to the official authorities."
+  },
+  {
+   "id": "industry-reports",
+   "title": "Industry Reports",
+   "slug": "intelligence-industry-reports.html",
+   "desc": "Original Portwise reports and briefings, published only once verified research is available."
+  },
+  {
+   "id": "sustainable-materials",
+   "title": "Sustainable Material Trends",
+   "slug": "intelligence-sustainable-materials.html",
+   "desc": "Natural and sustainable materials explained for buyers: properties, what to specify and what to ask suppliers."
+  }
+ ],
+ "articles": [
+  {
+   "slug": "incoterms-2020-explained",
+   "category": "regulations",
+   "title": "Incoterms 2020 explained for importers and exporters",
+   "summary": "Incoterms are eleven three-letter rules published by the International Chamber of Commerce. They set out who arranges transport, insurance and customs clearance, and where risk passes from seller to buyer.",
+   "published": "2026-11-24",
+   "updated": "2026-11-24",
+   "tags": [
+    "incoterms",
+    "contracts",
+    "shipping"
+   ],
+   "sections": [
+    {
+     "h": "What Incoterms do, and what they do not",
+     "p": [
+      "Incoterms® rules are published by the International Chamber of Commerce (ICC) and are used in contracts for the sale of goods worldwide. They define who is responsible for transport, insurance, export and import clearance, and at which point the risk of loss or damage moves from the seller to the buyer.",
+      "They do **not** set the price, say when payment is due, transfer ownership of the goods or decide how disputes are resolved. Those points belong in your sales contract."
+     ]
+    },
+    {
+     "h": "The eleven rules",
+     "p": [
+      "Incoterms 2020 groups the rules by transport mode. Seven can be used for any mode of transport, and four are for sea and inland waterway transport only."
+     ],
+     "ul": [
+      "**EXW** Ex Works: the buyer collects the goods at the seller's premises.",
+      "**FCA** Free Carrier: the seller hands the goods to the buyer's carrier at a named place.",
+      "**CPT** Carriage Paid To and **CIP** Carriage and Insurance Paid To: the seller pays carriage to a named destination (and, for CIP, insurance).",
+      "**DAP** Delivered at Place, **DPU** Delivered at Place Unloaded and **DDP** Delivered Duty Paid: the seller delivers to the destination, with DDP also covering import duties and clearance.",
+      "**FAS** Free Alongside Ship, **FOB** Free on Board, **CFR** Cost and Freight and **CIF** Cost, Insurance and Freight: sea and inland waterway only."
+     ]
+    },
+    {
+     "h": "Choosing a rule",
+     "p": [
+      "The sea-only rules (FOB, CFR, CIF) are written for goods loaded on board a vessel. For containers handed over at a terminal or depot, the any-mode rules (FCA, CPT, CIP) usually describe the real handover point better.",
+      "Think about who is better placed to arrange and pay for each step. A buyer with a trusted freight forwarder may prefer FCA or FOB. A buyer who wants one price to a named place may prefer DAP."
+     ]
+    },
+    {
+     "h": "Practical tips",
+     "ul": [
+      "Write the edition and the place, for example “FCA Chattogram, Incoterms 2020”. A rule without a named place is ambiguous.",
+      "Check who clears the goods for export and for import. This differs between rules.",
+      "Insurance cover differs: under Incoterms 2020, CIP calls for a higher minimum level of cover than CIF.",
+      "Use the same rule on the quotation, contract, invoice and shipping documents."
+     ]
+    }
+   ],
+   "takeaways": [
+    "Incoterms define delivery, costs and risk, not price, payment or ownership.",
+    "Always name the edition (Incoterms 2020) and the exact place or port.",
+    "For container cargo, the any-mode rules (FCA, CPT, CIP) often fit better than FOB, CFR or CIF."
+   ],
+   "sources": [
+    {
+     "label": "ICC: Incoterms® rules",
+     "url": "https://iccwbo.org/trade-facilitation/incoterms-rules/"
+    },
+    {
+     "label": "U.S. International Trade Administration: Know Your Incoterms",
+     "url": "https://trade.gov/know-your-incoterms"
+    }
+   ],
+   "related_tools": [
+    {
+     "label": "Landed Cost Calculator",
+     "href": "landed-cost.html"
+    },
+    {
+     "label": "How to Order",
+     "href": "order.html"
+    }
+   ]
+  },
+  {
+   "slug": "harmonized-system-hs-codes-explained",
+   "category": "regulations",
+   "title": "HS codes explained: why classification decides your duty and paperwork",
+   "summary": "The Harmonized System is the international product code used by customs worldwide. The code you declare affects the duty rate, import rules and statistics for your shipment.",
+   "published": "2026-11-24",
+   "updated": "2026-11-24",
+   "tags": [
+    "hs code",
+    "customs",
+    "tariff"
+   ],
+   "sections": [
+    {
+     "h": "What the Harmonized System is",
+     "p": [
+      "The Harmonized Commodity Description and Coding System, usually called the HS, is an international product nomenclature developed by the World Customs Organization (WCO). Almost every country bases its customs tariff and trade statistics on it."
+     ]
+    },
+    {
+     "h": "How a code is built",
+     "p": [
+      "The first six digits are the same in every country that uses the HS. Most countries add further digits for their own national tariff, so a full import code is commonly eight or ten digits and differs by destination."
+     ]
+    },
+    {
+     "h": "Why it matters to buyers and exporters",
+     "ul": [
+      "It determines the **duty rate** and whether a trade agreement preference applies.",
+      "It decides which **import requirements** apply, such as licences, certificates or inspections.",
+      "It appears on invoices, customs declarations and statistics, so inconsistent codes cause delays."
+     ]
+    },
+    {
+     "h": "Editions and updates",
+     "p": [
+      "The HS is revised about every five or six years. HS 2022 is the edition currently in force. The next edition, HS 2028, was announced by the WCO in January 2026 and is due to enter into force on 1 January 2028. Countries then adapt their national tariffs, so check your destination's schedule when it approaches."
+     ]
+    },
+    {
+     "h": "Good practice",
+     "ul": [
+      "Describe the product by what it is made of, how it is processed and what it is used for, then classify with the **destination country's** tariff.",
+      "Ask your supplier or customs broker which code they use, and confirm it matches the importer's.",
+      "Where available, ask the customs authority for an advance ruling if a code is uncertain.",
+      "Use the same code on every document for the shipment."
+     ]
+    }
+   ],
+   "takeaways": [
+    "The first six HS digits are international; the rest is set by each country.",
+    "The code affects duty, preferences, requirements and statistics.",
+    "HS 2022 is in force; HS 2028 is due on 1 January 2028 (WCO)."
+   ],
+   "sources": [
+    {
+     "label": "WCO: HS Nomenclature 2028 edition",
+     "url": "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2028-edition.aspx"
+    },
+    {
+     "label": "U.S. International Trade Commission: Harmonized Tariff Schedule",
+     "url": "https://hts.usitc.gov/"
+    },
+    {
+     "label": "UK Trade Tariff",
+     "url": "https://www.trade-tariff.service.gov.uk/"
+    },
+    {
+     "label": "EU Access2Markets",
+     "url": "https://trade.ec.europa.eu/access-to-markets/en/home"
+    }
+   ],
+   "related_tools": [
+    {
+     "label": "Country Import Requirements",
+     "href": "import-requirements.html"
+    },
+    {
+     "label": "Trade Statistics Explorer",
+     "href": "trade-statistics.html"
+    }
+   ]
+  },
+  {
+   "slug": "export-documents-checklist",
+   "category": "regulations",
+   "title": "Export documents checklist: what a typical shipment needs",
+   "summary": "A shipment usually travels with a core set of documents, plus extra certificates for food, plants and animal products. Mismatched details are a common cause of delay.",
+   "published": "2026-11-24",
+   "updated": "2026-11-24",
+   "tags": [
+    "documents",
+    "customs",
+    "export"
+   ],
+   "sections": [
+    {
+     "h": "The core documents",
+     "ul": [
+      "**Commercial invoice:** seller, buyer, goods, quantities, price, currency, Incoterms and HS code.",
+      "**Packing list:** packages, weights, dimensions and marks.",
+      "**Transport document:** bill of lading (sea) or air waybill (air).",
+      "**Export and import customs declarations:** prepared by the exporter, importer or their brokers.",
+      "**Insurance certificate:** if the sales terms make the seller responsible for insurance."
+     ]
+    },
+    {
+     "h": "Documents that depend on the product or destination",
+     "ul": [
+      "**Certificate of origin:** when the destination asks for it or a trade preference is claimed.",
+      "**Phytosanitary certificate:** commonly required for plants and plant products such as fresh produce.",
+      "**Health or veterinary certificates:** commonly required for meat, fish and other animal products.",
+      "**Certificates of analysis, quality or inspection:** when the contract, buyer or authority requires them.",
+      "**Letter of credit documents:** exactly as the credit specifies."
+     ]
+    },
+    {
+     "h": "Avoiding delays",
+     "ul": [
+      "Make names, addresses, quantities, weights, descriptions and codes **identical** across all documents.",
+      "Ask the importer early which certificates the destination requires for your product.",
+      "Send draft documents to the buyer or bank before shipping, especially under a letter of credit.",
+      "Keep copies of everything. Authorities and banks may ask for them later."
+     ]
+    }
+   ],
+   "takeaways": [
+    "Consistency across documents matters as much as having them.",
+    "Food, plant and animal products usually need extra certificates.",
+    "Confirm destination requirements before production, not after."
+   ],
+   "sources": [
+    {
+     "label": "International Plant Protection Convention (IPPC)",
+     "url": "https://www.ippc.int/"
+    },
+    {
+     "label": "EU Access2Markets",
+     "url": "https://trade.ec.europa.eu/access-to-markets/en/home"
+    }
+   ],
+   "related_tools": [
+    {
+     "label": "Export Readiness Checker",
+     "href": "export-readiness.html"
+    },
+    {
+     "label": "RFQ Template Library",
+     "href": "rfq-templates.html"
+    }
+   ]
+  },
+  {
+   "slug": "certificates-of-origin-and-trade-agreements",
+   "category": "regulations",
+   "title": "Certificates of origin and trade agreements in plain language",
+   "summary": "A certificate of origin states where goods were made. When a trade agreement applies, proof of origin can lead to lower or zero import duty.",
+   "published": "2026-11-24",
+   "updated": "2026-11-24",
+   "tags": [
+    "origin",
+    "trade agreements",
+    "tariff"
+   ],
+   "sections": [
+    {
+     "h": "Two kinds of origin document",
+     "p": [
+      "A **non-preferential** certificate of origin simply states the country where the goods were produced. Some destinations or buyers ask for it for statistics, labelling or import rules.",
+      "A **preferential** proof of origin is used to claim reduced or zero duty under a trade agreement or a unilateral preference scheme. It is only valid if the goods meet that agreement's rules of origin."
+     ]
+    },
+    {
+     "h": "Rules of origin",
+     "p": [
+      "Origin is not simply where the goods are shipped from. Each agreement sets its own tests, for example that the product was wholly obtained in the country, or that processing changed its tariff classification or added enough value. The rules differ by agreement and by product."
+     ]
+    },
+    {
+     "h": "Who issues proof",
+     "p": [
+      "Depending on the agreement, proof may be a certificate issued by an authorised body such as a chamber of commerce or government agency, or a statement made by the exporter or importer. Check which form your destination accepts."
+     ]
+    },
+    {
+     "h": "What to do",
+     "ul": [
+      "Identify the agreement and the exact HS code first.",
+      "Keep supplier declarations and production records that support the origin claim.",
+      "Ask the importer to confirm the duty saving before you rely on a preference.",
+      "Do not claim a preference you cannot document. Customs can audit claims after clearance."
+     ]
+    }
+   ],
+   "takeaways": [
+    "Preferential origin can reduce duty, but only if the product meets the agreement's rules.",
+    "Check the form of proof your destination accepts.",
+    "Keep records that support every origin claim."
+   ],
+   "sources": [
+    {
+     "label": "World Trade Organization",
+     "url": "https://www.wto.org/"
+    },
+    {
+     "label": "EU Access2Markets",
+     "url": "https://trade.ec.europa.eu/access-to-markets/en/home"
+    }
+   ],
+   "related_tools": [
+    {
+     "label": "Trade Agreement Explorer",
+     "href": "trade-agreements.html"
+    },
+    {
+     "label": "Country Import Requirements",
+     "href": "import-requirements.html"
+    }
+   ]
+  },
+  {
+   "slug": "international-payment-terms-explained",
+   "category": "regulations",
+   "title": "International payment terms: advance, letter of credit, collection and open account",
+   "summary": "How you get paid shapes the risk for both sides. The four common methods sit on a spectrum from most secure for the seller to most secure for the buyer.",
+   "published": "2026-11-24",
+   "updated": "2026-11-24",
+   "tags": [
+    "payment",
+    "letter of credit",
+    "risk"
+   ],
+   "sections": [
+    {
+     "h": "The four common methods",
+     "ul": [
+      "**Payment in advance:** the buyer pays before shipment. Lowest risk for the seller, highest for the buyer.",
+      "**Letter of credit (L/C):** a bank undertakes to pay the seller if the documents presented comply exactly with the credit's terms. Documentary credits are commonly governed by ICC's UCP 600.",
+      "**Documentary collection:** banks pass documents to the buyer against payment or acceptance, but do not guarantee payment. Commonly governed by ICC's URC 522.",
+      "**Open account:** the seller ships first and the buyer pays later. Highest risk for the seller."
+     ]
+    },
+    {
+     "h": "Choosing between them",
+     "p": [
+      "Choose according to trust, the size and value of the order, the country risk and the cost. New relationships often use advance payment for a share of the order, or a letter of credit, then move to less secure terms as trust builds."
+     ]
+    },
+    {
+     "h": "Practical tips",
+     "ul": [
+      "Make payment terms, Incoterms and required documents consistent in the contract.",
+      "Under a letter of credit, check the credit's wording against what you can actually supply **before** accepting it. Small mismatches can delay payment.",
+      "Ask who pays bank charges, including the other side's bank.",
+      "Agree the currency and what happens if exchange rates move."
+     ]
+    }
+   ],
+   "takeaways": [
+    "Payment terms trade risk between buyer and seller.",
+    "Letters of credit pay only against exactly compliant documents.",
+    "Keep payment terms, Incoterms and documents consistent."
+   ],
+   "sources": [
+    {
+     "label": "International Chamber of Commerce",
+     "url": "https://iccwbo.org/"
+    }
+   ],
+   "related_tools": [
+    {
+     "label": "RFQ Template Library",
+     "href": "rfq-templates.html"
+    },
+    {
+     "label": "Landed Cost Calculator",
+     "href": "landed-cost.html"
+    }
+   ]
+  },
+  {
+   "slug": "pre-shipment-inspection-and-quality-checks",
+   "category": "regulations",
+   "title": "Pre-shipment inspection: how buyers check quality before goods leave",
+   "summary": "An inspection before shipment helps confirm that goods match the agreed specification, quantity and packing. Clear written specifications make it work.",
+   "published": "2026-11-24",
+   "updated": "2026-11-24",
+   "tags": [
+    "inspection",
+    "quality",
+    "AQL"
+   ],
+   "sections": [
+    {
+     "h": "When inspections happen",
+     "ul": [
+      "**Before production:** checking materials and the supplier's readiness.",
+      "**During production:** spotting problems early.",
+      "**Pre-shipment:** a final check of finished, packed goods, usually on a random sample.",
+      "**Loading check:** confirming the right goods and quantities go into the container."
+     ]
+    },
+    {
+     "h": "Sampling and AQL",
+     "p": [
+      "Most final inspections check a sample rather than every unit. An Acceptable Quality Limit (AQL) sets how many defects in the sample are acceptable. Sampling plans are described in ISO 2859-1. Defects are usually classed as critical, major or minor, each with its own limit."
+     ]
+    },
+    {
+     "h": "What to specify in writing",
+     "ul": [
+      "Product specification with tolerances, dimensions, materials and performance.",
+      "Approved sample or reference photographs, kept by both sides.",
+      "Packaging, marking, labelling and carton or pallet configuration.",
+      "Test methods and any laboratory tests required, especially for food products and the destination's rules.",
+      "Defect classification and the AQL levels you accept."
+     ]
+    },
+    {
+     "h": "After the inspection",
+     "p": [
+      "Ask for a written report with photographs and the measured results. Agree in advance what happens if the goods fail: rework and re-inspection, a price adjustment or rejection. Share the inspection standard with the supplier **before** production starts."
+     ]
+    }
+   ],
+   "takeaways": [
+    "Write the specification and inspection standard down before production.",
+    "AQL sampling checks a sample, not every unit.",
+    "Agree the consequences of a failed inspection in advance."
+   ],
+   "sources": [
+    {
+     "label": "ISO: standards",
+     "url": "https://www.iso.org/"
+    }
+   ],
+   "related_tools": [
+    {
+     "label": "Quality Control",
+     "href": "quality-control.html"
+    },
+    {
+     "label": "Sample Evaluation",
+     "href": "sample-evaluation.html"
+    }
+   ]
+  },
+  {
+   "slug": "how-to-research-export-markets",
+   "category": "market-insights",
+   "title": "How to research an export market with free trade data",
+   "summary": "A short, repeatable method to see who buys a product, how much, from whom and under what conditions, using public trade statistics and tariff databases.",
+   "published": "2026-11-24",
+   "updated": "2026-11-24",
+   "tags": [
+    "market research",
+    "trade data",
+    "statistics"
+   ],
+   "sections": [
+    {
+     "h": "Step 1: define the product by HS code",
+     "p": [
+      "Trade statistics are organised by HS code. Pick the code, or a few neighbouring codes, that describe your product. Results change a lot depending on how broadly or narrowly you choose."
+     ]
+    },
+    {
+     "h": "Step 2: see who imports and from whom",
+     "p": [
+      "Use a trade statistics database such as ITC Trade Map or UN Comtrade. Look at the value and quantity imported by each country, how those figures have moved over several years, and which countries currently supply the market and in what shares."
+     ]
+    },
+    {
+     "h": "Step 3: compare unit values",
+     "p": [
+      "Dividing value by quantity gives a rough unit value. Comparing unit values between suppliers can hint at whether a market buys on price or quality, but treat it as a clue, not a fact, because product mix varies inside a code."
+     ]
+    },
+    {
+     "h": "Step 4: check conditions of entry",
+     "p": [
+      "Look up the destination's duty rate for your code, any preference you may qualify for and non-tariff requirements such as certificates, labelling or inspections. A market that looks large may be hard to enter for your product."
+     ]
+    },
+    {
+     "h": "Know the limits of the data",
+     "ul": [
+      "Data lags: the latest year may be incomplete or published months later.",
+      "Countries report differently. Comparing an exporter's figures with the importer's “mirror” figures can reveal gaps.",
+      "Codes group different qualities together. Validate with real buyers before you commit."
+     ]
+    }
+   ],
+   "takeaways": [
+    "Start from the right HS code.",
+    "Combine import volume, trends, competitors and entry conditions.",
+    "Treat statistics as a starting point and validate with buyers."
+   ],
+   "sources": [
+    {
+     "label": "ITC Trade Map",
+     "url": "https://www.trademap.org/"
+    },
+    {
+     "label": "UN Comtrade",
+     "url": "https://comtrade.un.org/"
+    },
+    {
+     "label": "ITC Market Access Map",
+     "url": "https://www.macmap.org/"
+    }
+   ],
+   "related_tools": [
+    {
+     "label": "Trade Statistics Explorer",
+     "href": "trade-statistics.html"
+    },
+    {
+     "label": "Global Trade Map",
+     "href": "trade-map.html"
+    }
+   ]
+  },
+  {
+   "slug": "how-to-track-commodity-prices",
+   "category": "commodity-trends",
+   "title": "How to track commodity prices, and what usually moves them",
+   "summary": "Prices of agricultural and other commodities move for reasons you can watch: harvests, energy and freight, currencies and policy. This guide shows where to follow them and how to protect a contract.",
+   "published": "2026-11-24",
+   "updated": "2026-11-24",
+   "tags": [
+    "commodities",
+    "prices",
+    "risk"
+   ],
+   "sections": [
+    {
+     "h": "What usually moves prices",
+     "ul": [
+      "**Supply:** weather, harvest size, disease and stock levels.",
+      "**Demand:** population, income, biofuel and industrial use, and changes in diet or fashion.",
+      "**Costs:** energy, fertiliser, labour and freight.",
+      "**Currencies:** a stronger exporter currency can raise the price in the buyer's currency.",
+      "**Policy:** export restrictions, tariffs, subsidies and sanctions."
+     ]
+    },
+    {
+     "h": "Where to follow them",
+     "p": [
+      "The FAO Food Price Index tracks international prices of major food commodity groups and is published monthly. The World Bank publishes commodity price data. For day-to-day context on products relevant to Portwise, use the Global Commodity Monitor on this site, which links to trusted live sources."
+     ]
+    },
+    {
+     "h": "Reading price information carefully",
+     "ul": [
+      "Check the **grade, origin, delivery term and date** behind any price. A headline price may not match your specification.",
+      "Separate the price of the commodity from freight, insurance and duties. A landed cost view is more useful for a buyer.",
+      "Remember that spot prices and contract prices can differ significantly."
+     ]
+    },
+    {
+     "h": "Protecting a contract",
+     "ul": [
+      "Fix the price for a defined period, or link it to an agreed published index with a clear formula.",
+      "Agree the currency, and who carries exchange-rate movement.",
+      "Avoid depending on a single supplier or origin where the product allows alternatives."
+     ]
+    }
+   ],
+   "takeaways": [
+    "Watch supply, demand, costs, currencies and policy.",
+    "Compare like with like: grade, origin, delivery term and date.",
+    "Use fixed periods or agreed indexes to manage price risk."
+   ],
+   "sources": [
+    {
+     "label": "FAO Food Price Index",
+     "url": "https://www.fao.org/worldfoodsituation/foodpricesindex/en/"
+    },
+    {
+     "label": "World Bank: commodity markets",
+     "url": "https://www.worldbank.org/en/research/commodity-markets"
+    }
+   ],
+   "related_tools": [
+    {
+     "label": "Global Commodity Monitor",
+     "href": "commodity-monitor.html"
+    },
+    {
+     "label": "Landed Cost Calculator",
+     "href": "landed-cost.html"
+    }
+   ]
+  },
+  {
+   "slug": "importing-food-into-the-eu-uk-us-first-steps",
+   "category": "country-trade",
+   "title": "Importing food into the EU, UK and USA: first steps",
+   "summary": "A starting checklist for each of three major markets. Rules depend on the exact product, so use this to know what to ask, then confirm with the official authority or a licensed customs broker.",
+   "published": "2026-11-24",
+   "updated": "2026-11-24",
+   "tags": [
+    "EU",
+    "UK",
+    "USA",
+    "food imports"
+   ],
+   "sections": [
+    {
+     "h": "Before anything else",
+     "ul": [
+      "Classify the product (HS code) using the **destination** tariff.",
+      "Ask the importer which certificates and registrations the product needs.",
+      "Confirm labelling, packaging and ingredient rules for the destination."
+     ]
+    },
+    {
+     "h": "European Union",
+     "ul": [
+      "Operators lodging customs declarations need an **EORI number**.",
+      "Imported food must meet EU food law, including hygiene, contaminant limits, traceability and labelling.",
+      "Products of animal origin generally need an official health certificate and must come from approved countries and establishments.",
+      "Plants and plant products (including fresh produce) generally need a phytosanitary certificate."
+     ]
+    },
+    {
+     "h": "United Kingdom",
+     "ul": [
+      "The UK has its own customs tariff and import rules, separate from the EU's, and importers need a UK **EORI number**.",
+      "Use the official UK Trade Tariff to find the duty and import requirements for your commodity code.",
+      "Plant and animal products may be subject to additional health and inspection controls."
+     ]
+    },
+    {
+     "h": "United States",
+     "ul": [
+      "Facilities that manufacture, process, pack or hold food for U.S. consumption must be **registered with the FDA**, and FDA must receive **prior notice** of each food shipment before it arrives.",
+      "Imports are entered through U.S. Customs and Border Protection, normally with an importer of record, and duty follows the Harmonized Tariff Schedule.",
+      "Meat, poultry and egg products are overseen by the U.S. Department of Agriculture and have separate eligibility rules for foreign countries and plants."
+     ]
+    },
+    {
+     "h": "Important",
+     "p": [
+      "Requirements change and vary by product. Always confirm with the official source or a licensed customs broker before shipping. This page is general information, not legal advice."
+     ]
+    }
+   ],
+   "takeaways": [
+    "Know your HS code and ask the importer what the product needs.",
+    "The EU and UK need EORI numbers for customs declarations; the USA needs FDA registration and prior notice for food.",
+    "Animal and plant products carry extra certification and controls."
+   ],
+   "sources": [
+    {
+     "label": "EU Access2Markets",
+     "url": "https://trade.ec.europa.eu/access-to-markets/en/home"
+    },
+    {
+     "label": "UK Trade Tariff",
+     "url": "https://www.trade-tariff.service.gov.uk/"
+    },
+    {
+     "label": "FDA: Importing Food Products into the United States",
+     "url": "https://www.fda.gov/food/food-imports-exports/importing-food-products-united-states"
+    },
+    {
+     "label": "FDA: Prior Notice of Imported Foods",
+     "url": "https://www.fda.gov/industry/fda-import-process/prior-notice-imported-foods"
+    },
+    {
+     "label": "U.S. Harmonized Tariff Schedule",
+     "url": "https://hts.usitc.gov/"
+    }
+   ],
+   "related_tools": [
+    {
+     "label": "Country Import Requirements",
+     "href": "import-requirements.html"
+    },
+    {
+     "label": "Countries & Markets",
+     "href": "markets.html"
+    }
+   ]
+  },
+  {
+   "slug": "jute-natural-fibre-packaging-buyers-guide",
+   "category": "sustainable-materials",
+   "title": "Jute as a natural fibre material: a buyer's guide",
+   "summary": "Jute is a plant-based fibre used for sacks, bags, cloth and yarn. This guide covers its properties, its limits and what to specify when you buy.",
+   "published": "2026-11-24",
+   "updated": "2026-11-24",
+   "tags": [
+    "jute",
+    "natural fibre",
+    "packaging",
+    "sustainable materials"
+   ],
+   "sections": [
+    {
+     "h": "What jute is",
+     "p": [
+      "Jute is a bast fibre taken from the stem of Corchorus plants. It is an annual crop, grown mainly in Bangladesh and India, and is spun and woven into products such as sacks, shopping and promotional bags, hessian cloth, yarn and twine."
+     ]
+    },
+    {
+     "h": "Properties buyers value",
+     "ul": [
+      "Plant-based and renewable, and biodegradable at end of life.",
+      "Strong and breathable, which suits dry goods and some produce.",
+      "Takes natural colours and prints well, with a recognisable natural look."
+     ]
+    },
+    {
+     "h": "Limits to plan for",
+     "ul": [
+      "It is sensitive to moisture: damp storage can cause mildew and loss of strength.",
+      "Colour, weight and weave can vary between batches, so agree tolerances.",
+      "Processing aids can be used in spinning. If the product will touch food or children's items, ask for test reports for your intended use."
+     ]
+    },
+    {
+     "h": "What to specify when buying",
+     "ul": [
+      "Product type, dimensions and construction (weave, weight per area, thread count).",
+      "Strength and moisture requirements, and the test method.",
+      "Colour, printing and finishing, with an approved sample.",
+      "Lining or lamination if you need moisture or dust protection.",
+      "Any certifications or compliance reports your market or customer requires.",
+      "Minimum order quantity, lead time and packing method for shipping."
+     ]
+    },
+    {
+     "h": "Comparing with other materials",
+     "p": [
+      "No material is best for everything. Compare weight, strength, cost, appearance, end-of-life and the claims you can substantiate. The Materials Library and Compare Materials tools on this site help you set options side by side."
+     ]
+    }
+   ],
+   "takeaways": [
+    "Jute is renewable and biodegradable, but needs dry storage and agreed tolerances.",
+    "Ask for test reports if the product will contact food.",
+    "Specify construction, strength, colour and finishing in writing, and approve a sample."
+   ],
+   "sources": [
+    {
+     "label": "Food and Agriculture Organization of the UN",
+     "url": "https://www.fao.org/"
+    }
+   ],
+   "related_tools": [
+    {
+     "label": "Materials Library",
+     "href": "materials.html"
+    },
+    {
+     "label": "Compare Materials",
+     "href": "material-comparison.html"
+    },
+    {
+     "label": "Packaging & Private Label",
+     "href": "packaging.html"
+    }
+   ]
+  }
+ ],
+ "reports": []
+}
